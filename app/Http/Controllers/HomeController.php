@@ -126,15 +126,15 @@ class HomeController extends Controller
         $requestURL = "https://blockchain.info/ticker";
 
         // Execute the request
-        $singleCurrencyRequest = file_get_contents($requestURL);
+        $singleCurrencyRequest = file_get_contents($requestURL, false);
         
         // Obtain the body into an array format.
         $body = json_decode($singleCurrencyRequest , true);
 
         // If there were some error on the request, throw the exception
-        if(array_key_exists("error" , $body)){
-            throw $this->createNotFoundException(sprintf('Currency Information Request Error: $s', $body["error"]));
-        }
+        // if(array_key_exists("error" , $body)){
+        //     throw $this->createNotFoundException(sprintf('Currency Information Request Error: $s', $body["error"]));
+        // }
 
         // Returns the array with information about the desired currency
         $result =  $body["USD"];
