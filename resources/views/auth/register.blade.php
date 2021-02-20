@@ -92,8 +92,8 @@
                   </div>
                  
                   <div class="text-block text-center my-3">
-                    <span class="text-small font-weight-semibold">Not a member ?</span>
-                    <a href="{{ route('register') }}" class="text-black text-small">Create new account</a>
+                    <span class="text-small font-weight-semibold">Already a member ?</span>
+                    <a href="{{ route('login') }}" class="text-black text-small">Login</a>
                   </div>
                 </form>
               </div>

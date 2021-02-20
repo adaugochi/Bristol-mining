@@ -8,6 +8,9 @@ use App\Packages;
 use App\Deposit;
 use App\Transaction;
 use App\DepositProof;
+use App\TradeIncome;
+
+use App\Mail\DepositRequestMail;
 
 class TransactionController extends Controller
 {
@@ -47,6 +50,16 @@ class TransactionController extends Controller
                 'deposit_id' =>  $deposit->id,
                 'type' => 'Deposit'
             ]);
+            
+            try {
+                $email = auth()->user()->email;
+                $username = auth()->user()->name;
+                $message = "$ $amount USD";
+                \Mail::to($email)->send(new DepositRequestMail($username, $message));
+            } catch(\Exception $e) {
+                \Log::alert("Deposit Request mail not sent!");
+            }
+
             $request->session()->flash('success', 'Deposit initiated! Please make your payment.');
             return redirect()->route('payment', ['id' => $deposit->id]);
         } else {
@@ -103,8 +116,6 @@ class TransactionController extends Controller
         $request->session()->flash('success', "Deposit proof added successfully!");
         return redirect()->back();
     }
-
-
     
     public function depositsHistory(Request $request)
     {
@@ -113,4 +124,20 @@ class TransactionController extends Controller
             ->paginate(15);
         return view('deposit-history')->with(['deposits' => $deposits]);
     }
+
+    public function all(Request $request)
+    {
+        $trxs = Transaction::where(['user_id' => auth()->user()->id])
+            ->with(['deposit', 'deposit.plan', 'deposit.proofs'])
+            ->paginate(15);
+        return view('transaction')->with(['trxs' => $trxs]);
+    }
+
+    public function income(Request $request)
+    {
+        $trxs = TradeIncome::where(['user_id' => auth()->user()->id])
+            ->with(['deposit', 'deposit.plan'])
+            ->paginate(15);
+        return view('income')->with(['trxs' => $trxs]);
+    }    
 }

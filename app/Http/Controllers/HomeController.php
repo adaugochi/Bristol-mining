@@ -146,6 +146,26 @@ class HomeController extends Controller
         return view('topup');
     }
 
+    public function profile()
+    {
+        $user = \App\User::find(auth()->user()->id);
+        return view('profile')->with(['user' => $user]);
+    }
+
+    public function profileUpdate(Request $request)
+    {
+        $this->validate($request, [
+            'name' => 'required',
+            'btc_wallet' => 'required'
+        ]);
+            \App\User::where(['id' => auth()->user()->id])
+                ->update(['name' => $request->name,
+                    'btc_wallet' => $request->btc_wallet
+                    ]);
+        $request->session()->flash('success', 'Profile record updated successfully!');
+        return redirect()->back();
+    }
+
     public function logout()
     {
         \Auth::logout();

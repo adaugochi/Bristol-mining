@@ -27,7 +27,8 @@
         <div class="col-md-12 d-flex align-items-stretch">
             <div class="card">
                 <div class="card-body table-responsive">
-                  <h4 class="card-title">Deposit Record</h4>
+                  <h4 class="card-title">Transaction Records</h4>
+
                   <table class="table mt-1">
                       <thead>
                           <tr>
@@ -36,34 +37,43 @@
                               <th>Due Amount ($)</th>
                               <th>Package</th>
                               <th>Status</th>
+                              <th>Withdrawn</th>
                               <th>Method</th>
                               <th>Initiated Date</th>
                               <th>View</th>
                           </tr>
                       </thead>
                       <tbody>
-                          @foreach ($deposits as $d => $key)
+                          @foreach ($trxs as $d => $key)
                               <tr>
                                   <td>{{$d + 1 }}</td>
-                                  <td>${{number_format($key->amount, 2, '.', ',')}}</td>
-                                  <td>${{number_format($key->due_amount, 2, '.', ',')}}</td>
-                                  <td>{{$key->plan->name}}</td>
+                                  <td>${{number_format($key->deposit->amount, 2, '.', ',')}}</td>
+                                  <td>${{number_format($key->deposit->due_amount, 2, '.', ',')}}</td>
+                                  <td>{{$key->deposit->plan->name}}, {{$key->type}} </td>
                                   <td>
-                                      @if ($key->status == "Pending")
-                                          <span class="badge badge-warning p-2">{{$key->status}}</span>
+                                      @if ($key->deposit->status == "Pending")
+                                          <span class="badge badge-warning p-2">{{$key->deposit->status}}</span>
                                       @else
-                                          <span class="badge badge-success p-2">{{$key->status}}</span>
+                                          <span class="badge badge-success p-2">{{$key->deposit->status}}</span>
                                       @endif
                                   </td>
-                                  <td>{{$key->method}}</td>
+                                  <td>
+                                      @if (isset($key->withdrawal_id))
+                                          <p class="badge badge-success p-2">Yes</p>
+                                      @else
+                                          <p class="badge badge-warning p-2">No</p>
+                                      @endif
+                                  </td>
+                                  
+                                  <td>{{$key->deposit->method}}</td>
                                   <td>{{$key->created_at->diffForHumans()}}</td>
-                                  <td><a href="{{route('payment', ['id' => $key->id])}}" class="btn btn-success">View details</a></td>
+                                  <td><a href="{{route('payment', ['id' => $key->deposit->id])}}" class="btn btn-success">View details</a></td>
                               </tr>
                           @endforeach
                       </tbody>
                   </table>
 
-                  {{$deposits->links()}}
+                  {{$trxs->links()}}
                 </div>
               </div>
         </div>

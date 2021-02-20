@@ -24,9 +24,11 @@ Route::group(['middleware' => ['auth', 'verified']], function () {
     
     Route::get('/deposits', 'TransactionController@deposits')->name('deposits');
     Route::get('/deposits-history', 'TransactionController@depositsHistory')->name('deposits.history');
-    // Route::get('/transactions', 'TransactionController@all')->name('transactions');
+    Route::get('/transactions', 'TransactionController@all')->name('transactions');
+    Route::get('/income', 'TransactionController@income')->name('income');
     Route::get('/referrals',    'ReferralController@index')->name('referrals');
     Route::get('/profile', 'HomeController@profile')->name('profile');
+    Route::post('/profile', 'HomeController@profileUpdate')->name('profile');
     Route::get('/reviews', 'ReviewController@index')->name('reviews');
 
     // Route::get('/deposit', 'HomeController@deposit')->name('deposit');

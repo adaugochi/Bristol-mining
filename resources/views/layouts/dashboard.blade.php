@@ -29,12 +29,11 @@
         <nav class="navbar default-layout col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
           <div class="text-center navbar-brand-wrapper d-flex align-items-top justify-content-center">
             <a class="navbar-brand brand-logo" href="{{ route('home') }}">
-              {{-- <img src="assets/images/logo.svg" alt="logo" />  --}}
-              {{env('DOMAIN_NAME')}}
+              <img src="{{asset('blendconsults.png')}}" style="width: 90px;" alt="logo" /> 
+              {{-- {{env('DOMAIN_NAME')}} --}}
             </a>
             <a class="navbar-brand brand-logo-mini" href="{{ route('home') }}">
-              {{-- <img src="assets/images/logo-mini.svg" alt="logo" />  --}}
-              {{env('DOMAIN_NAME')}}
+              <img src="{{asset('blendconsults.png')}}" style="width: 50px;" alt="logo" /> 
             </a>
           </div>
           <div class="navbar-menu-wrapper d-flex align-items-center">
@@ -60,7 +59,7 @@
                     <p class="mb-1 mt-3 font-weight-semibold">{{ Auth::user()->name }}</p>
                     <p class="font-weight-light text-muted mb-0">{{ Auth::user()->email }}</p>
                   </div>
-                  <a class="dropdown-item">My Profile <span class="badge badge-pill badge-danger">1</span><i class="dropdown-item-icon ti-dashboard"></i></a>
+                  <a class="dropdown-item" href="{{ route('profile') }}">My Profile <i class="dropdown-item-icon ti-dashboard"></i></a>
                   <hr>
                   <a class="dropdown-item" href="{{ route('logout') }}">Sign Out<i class="dropdown-item-icon ti-power-off"></i></a>
                 </div>
@@ -112,7 +111,7 @@
                       <a class="nav-link" href="#">Withdrawal Request</a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="#">Transactions</a>
+                      <a class="nav-link" href="{{ route('transactions') }}">Transactions</a>
                     </li>
                   </ul>
                 </div>
@@ -126,19 +125,19 @@
                 <div class="collapse" id="ui-trading">
                   <ul class="nav flex-column sub-menu">
                     <li class="nav-item">
-                      <a class="nav-link" href="#">Trading Income</a>
+                      <a class="nav-link" href="{{ route('income') }}">Trading Income</a>
                     </li>
                   </ul>
                 </div>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">
+                <a class="nav-link" href="{{ route('referrals') }}">
                   <i class="menu-icon typcn typcn-th-large-outline"></i>
                   <span class="menu-title">Referrals</span>
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">
+                <a class="nav-link" href="{{ route('profile') }}">
                   <i class="menu-icon typcn typcn-bell"></i>
                   <span class="menu-title">Settings</span>
                 </a>

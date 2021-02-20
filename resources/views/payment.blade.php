@@ -38,7 +38,7 @@
     </div>
 </div>
 
-<div class="row mt-2">
+<div class="row mt-2 table-responsive">
 
     <table class="table table-bordered">
         <tr>
