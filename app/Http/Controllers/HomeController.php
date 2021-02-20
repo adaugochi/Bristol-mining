@@ -29,8 +29,12 @@ class HomeController extends Controller
     public function index()
     {
         $bitcoinInfo = $this->getCryptoCurrencyInformation();
+        
+        if(!$bitcoinInfo) {
+            $bitcoinInfo = 47000.80;
+        } 
 
-        $xrate = $bitcoinInfo["last"] ?? 10000.26;
+        $xrate = $bitcoinInfo;
 
         $income = $this->getTotalIncome() ?? 0.00;
         $deposit =  0.0000000;
@@ -64,9 +68,13 @@ class HomeController extends Controller
 
     public function deposit() 
     {
-        $bitcoinInfo = $this->getCryptoCurrencyInformation();
 
-        $xrate = $bitcoinInfo["last"] ?? 10000.26;
+        $bitcoinInfo = $this->getCryptoCurrencyInformation();
+        
+        if(!$bitcoinInfo) {
+            $bitcoinInfo = 47000.80;
+        } 
+        
         return view('deposit')->with([
             'xrate' => $xrate
         ]);
@@ -119,26 +127,18 @@ class HomeController extends Controller
      * @return mixed 
      */
     private function getCryptoCurrencyInformation(){
-        // Create a new Guzzle Plain Client
-        // $client = new Client();
 
-        // Define the Request URL of the API with the providen parameters
-        $requestURL = "https://blockchain.info/ticker";
+        $cURLConnection = curl_init();
 
-        // Execute the request
-        $singleCurrencyRequest = file_get_contents($requestURL, false);
+        curl_setopt($cURLConnection, CURLOPT_URL, "https://api.coingate.com/v2/rates/merchant/BTC/USD");
+        curl_setopt($cURLConnection, CURLOPT_RETURNTRANSFER, true);
         
-        // Obtain the body into an array format.
-        $body = json_decode($singleCurrencyRequest , true);
+        $rates = curl_exec($cURLConnection);
+        curl_close($cURLConnection);
+        
 
-        // If there were some error on the request, throw the exception
-        // if(array_key_exists("error" , $body)){
-        //     throw $this->createNotFoundException(sprintf('Currency Information Request Error: $s', $body["error"]));
-        // }
-
-        // Returns the array with information about the desired currency
-        $result =  $body["USD"];
-        return $result;
+        return $rates;
+            
     }
 
     public function topup()
