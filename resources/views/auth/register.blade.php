@@ -26,6 +26,11 @@
           <div class="row w-100" style="margin-top: 50px;">
             <div class="col-lg-4 mx-auto">
               <div class="auto-form-wrapper">
+                <center>
+                  <a href="/">
+                  <img src="{{ asset('blendconsults.png') }}" style="width: 150px" alt="" srcset="">
+                  </a>
+                </center>
                 <form method="POST" action="{{ route('register') }}">
                   @csrf
                   <div class="form-group">
