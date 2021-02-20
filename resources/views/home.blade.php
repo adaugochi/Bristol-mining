@@ -11,11 +11,11 @@
                 <div class="quick-link-wrapper w-100 d-md-flex flex-md-wrap">
                     <ul class="quick-links">
                     <li><a href="{{ route('deposits') }}">Deposit funds</a></li>
-                    <li><a href="#">Monitor Earnings</a></li>
-                    <li><a href="#">Transactions</a></li>
+                    <li><a href="{{ route('income') }}">Monitor Earnings</a></li>
+                    <li><a href="{{ route('transactions') }}">Transactions</a></li>
                     </ul>
                     <ul class="quick-links ml-auto">
-                    <li><a href="#">Settings</a></li>
+                    <li><a href="{{ route('profile') }}">Settings</a></li>
                     </ul>
                 </div>
                 
@@ -63,7 +63,7 @@
             <div class="col-lg-3 col-md-6 mt-md-0 mt-4">
                 <div class="d-flex">
                 <div class="wrapper">
-                    <h3 class="mb-0 font-weight-semibold">7,688</h3>
+                    <h3 class="mb-0 font-weight-semibold">{{$referral_count}}</h3>
                     <h5 class="mb-0 font-weight-medium text-primary">Referred Members</h5>
                 </div>
                 </div>

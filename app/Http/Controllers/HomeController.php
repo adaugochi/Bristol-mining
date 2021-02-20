@@ -54,6 +54,7 @@ class HomeController extends Controller
 
         $income_btc = $income / $xrate;
 
+        $referral_count = $this->getReferralCount(auth()->user()->id);
         return view('home')->with([
             'xrate' => number_format($xrate, 2, '.', ','),
             'deposit' => number_format($deposit, 6, '.', ','),
@@ -62,7 +63,8 @@ class HomeController extends Controller
             'current_investment' => number_format($current_investment, 2, '.', ', '),
             'current_investment_btc' => number_format($current_investment_btc, 6, '.', ', '),
             'plan' =>  $plan,
-            'deposits' =>  $deposits
+            'deposits' =>  $deposits,
+            'referral_count' => $referral_count
         ]);
     }
 
@@ -139,6 +141,13 @@ class HomeController extends Controller
 
         return $rates;
             
+    }
+
+    private function getReferralCount($user_id) {
+        $referrals = \App\Referral::where(['referral_id' => $user_id])
+            ->with(['referral'])
+            ->get();
+        return sizeof($referrals);
     }
 
     public function topup()

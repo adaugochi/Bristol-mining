@@ -8,6 +8,7 @@ use App\User;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
+use Illuminate\Http\Request;
 
 class RegisterController extends Controller
 {
@@ -66,11 +67,28 @@ class RegisterController extends Controller
     {
         $referral_code = mt_rand(1000000, 9999999);
 
-        return User::create([
+        $u = User::create([
             'name' => $data['name'],
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
             'referral_code' => $referral_code,
         ]);
+
+
+        if(isset(request()->referral)) {
+            $rusr = User::where(['referral_code' => request()->referral])
+                ->get()
+                ->first();
+            if(!is_null($rusr))
+                \App\Referral::create(['user_id' => $u->id, 'has_injected' => 0, 'referral_id' => $rusr->id]);    
+        }
+
+        return $u;
+    }
+
+    public function showRegistrationForm(Request $request)
+    {
+        $ref = $request->ref ?? 1106684;
+        return view('auth.register')->with(['ref' => $ref]);
     }
 }

@@ -83,13 +83,26 @@
                   </div>
 
                   <div class="form-group">
-                    <label for="password-confirm" class="label">{{ __('Confirm Password') }}</label>
+                      <label for="password-confirm" class="label">{{ __('Confirm Password') }}</label>
+
+                      <div class="input-group">
+                          <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
+                      </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="password-confirm" class="label">Referral</label>
 
                     <div class="input-group">
-                        <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
-                    </div>
-                </div>
+                      <input id="referral" type="text" readonly class="form-control input-bordered @error('referral') is-invalid @enderror" name="referral" value="{{ $ref }}" required placeholder="Referral Email" autocomplete="referral" autofocus>
 
+                      @error('referral')
+                          <span class="invalid-feedback" role="alert">
+                              <strong>{{ $message }}</strong>
+                          </span>
+                      @enderror
+                    </div>
+                  </div>
                    
 
                   <div class="form-group">
