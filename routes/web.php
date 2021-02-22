@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('auth.login');
+    return view('welcome');
 });
 
 Auth::routes(['verify' => true]);
@@ -35,6 +35,8 @@ Route::group(['middleware' => ['auth', 'verified']], function () {
     Route::post('/deposit', 'TransactionController@deposit')->name('deposit');
     Route::get('/deposit/payment/{id}', 'TransactionController@payment')->name('payment');
     Route::post('/deposit/payment/proof', 'TransactionController@proof')->name('proof');
+    Route::get('/withdrawal', 'TransactionController@withdrawal')->name('withdrawal');
+    Route::post('/withdrawal', 'TransactionController@withdrawalRequest')->name('withdrawal');
 
     Route::get('/logout', 'HomeController@logout')->name('logout'); 
 });
