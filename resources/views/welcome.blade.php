@@ -132,9 +132,9 @@
                               <li class="full-star"><i class='bx bxs-star'></i></li>
                               <li class="full-star"><i class='bx bxs-star'></i></li>
                            </ul>
-                           <p>Migration dolor sit amet etur divelit conseetur diisci velit sed tempora incidunt </p>
+                           <p>Open, Ready market trading with Fiat and Cryptocurrency inclusion. </p>
                            <div class="support-logo">
-                              <img src="assets1/images/hi-bank.png" alt="logo">
+                              <img src="blendconsults.png" style="width: 100px;" alt="logo">
                            </div>
                         </div>
                      </div>
@@ -145,7 +145,7 @@
                            <img src="assets1/images/envelop.png" alt="support">
                         </div>
                         <div class="support-details">
-                           <h3><a href="https://templates.hibootstrap.com/cdn-cgi/l/email-protection#ddb4b3bbb29dbcb1b4bcf3beb2b0"><span class="__cf_email__" data-cfemail="ed84838b82ad8c81848cc38e8280">[email&#160;protected]</span></a></h3>
+                           <h3><a href="#">support@blendconsults.com</span></a></h3>
                            <p>Support 24/7</p>
                         </div>
                      </div>
@@ -179,8 +179,7 @@
       <section class="feature-section p-tb-100 overflow-x-hidden">
          <div class="container">
             <div class="section-title">
-               <h2>Our valuable features</h2>
-               <p>Lorem ipsum dolor sit amet consectetur adipisicing sed do </p>
+               <h2>Our values</h2>
             </div>
             <div class="home-feature">
                <div class="home-feature-carousel owl-carousel owl-theme">
@@ -190,9 +189,8 @@
                            <img src="assets1/images/file.png" alt="feature">
                         </div>
                         <div class="feature-carousel-details">
-                           <h3>Fully Encrypted</h3>
-                           <p>Lorem ipsum dolor sit amet, cosectetur adipisicing elit, sed deimod tempor incid-idunt ut dolor sit amet</p>
-                           <a href="feature-details.html" class="btn1"><span>Read More +</span></a>
+                           <h3>Regulated Entity</h3>
+                           <p>As Finra regulated and approved firm we provide security on minimum deposit and assure 100% withdrawal,with our DDOS protection you can be rest assured that your investment and personal details are secured with us everyday.</p>
                         </div>
                      </div>
                   </div>
@@ -202,9 +200,8 @@
                            <img src="assets1/images/hand.png" alt="feature">
                         </div>
                         <div class="feature-carousel-details">
-                           <h3>Transparent Pricing</h3>
-                           <p>Lorem ipsum dolor sit amet, cosectetur adipisicing elit, sed deimod tempor incid-idunt ut dolor sit amet</p>
-                           <a href="feature-details.html" class="btn1"><span>Read More +</span></a>
+                           <h3>Legitimacy</h3>
+                           <p>We are brokerage firm that is registered and regulated by the Financial Industries Regulatory Authorities (FINRA)...We are licensed brokers and most importantly our records speaks for itself.</p>
                         </div>
                      </div>
                   </div>
@@ -214,9 +211,8 @@
                            <img src="assets1/images/megaphone.png" alt="feature">
                         </div>
                         <div class="feature-carousel-details">
-                           <h3>Instant cashout</h3>
-                           <p>Lorem ipsum dolor sit amet, cosectetur adipisicing elit, sed deimod tempor incid-idunt ut dolor sit amet</p>
-                           <a href="feature-details.html" class="btn1"><span>Read More +</span></a>
+                           <h3>Profit Oriented</h3>
+                           <p>We work on the leading cryptocurrency exchanges (Crypto-Trading) and provide every investor with stable income regardless deposit amount.</p>
                         </div>
                      </div>
                   </div>
@@ -227,59 +223,23 @@
                         </div>
                         <div class="feature-carousel-details">
                            <h3>Safe and Secure</h3>
-                           <p>Lorem ipsum dolor sit amet, cosectetur adipisicing elit, sed deimod tempor incid-idunt ut dolor sit amet</p>
-                           <a href="feature-details.html" class="btn1"><span>Read More +</span></a>
+                           <p>Our platform is protected from all types of DDOS attacks at the highest level. We do not save on security and invest primarily in protecting data and equipment.</p>
                         </div>
                      </div>
                   </div>
-                  <div class="item">
-                     <div class="feature-carousel-content">
-                        <div class="feature-carousel-thumb status-blue">
-                           <img src="assets1/images/file.png" alt="feature">
-                        </div>
-                        <div class="feature-carousel-details">
-                           <h3>Fully Encrypted</h3>
-                           <p>Lorem ipsum dolor sit amet, cosectetur adipisicing elit, sed deimod tempor incid-idunt ut dolor sit amet</p>
-                           <a href="feature-details.html" class="btn1"><span>Read More +</span></a>
-                        </div>
-                     </div>
-                  </div>
+                  
                   <div class="item">
                      <div class="feature-carousel-content">
                         <div class="feature-carousel-thumb status-orange">
                            <img src="assets1/images/hand.png" alt="feature">
                         </div>
                         <div class="feature-carousel-details">
-                           <h3>Transparent Pricing</h3>
-                           <p>Lorem ipsum dolor sit amet, cosectetur adipisicing elit, sed deimod tempor incid-idunt ut dolor sit amet</p>
-                           <a href="feature-details.html" class="btn1"><span>Read More +</span></a>
+                           <h3>Proficient Partner</h3>
+                           <p>Each of our investors becomes a partner and receives passive income from invited users. We have developed a referral program with a return of up to 30%.</p>
                         </div>
                      </div>
                   </div>
-                  <div class="item">
-                     <div class="feature-carousel-content">
-                        <div class="feature-carousel-thumb status-green">
-                           <img src="assets1/images/megaphone.png" alt="feature">
-                        </div>
-                        <div class="feature-carousel-details">
-                           <h3>Safe and Secure</h3>
-                           <p>Lorem ipsum dolor sit amet, cosectetur adipisicing elit, sed deimod tempor incid-idunt ut dolor sit amet</p>
-                           <a href="feature-details.html" class="btn1"><span>Read More +</span></a>
-                        </div>
-                     </div>
-                  </div>
-                  <div class="item">
-                     <div class="feature-carousel-content">
-                        <div class="feature-carousel-thumb status-orange">
-                           <img src="assets1/images/shield.png" alt="feature">
-                        </div>
-                        <div class="feature-carousel-details">
-                           <h3>Instant cashout</h3>
-                           <p>Lorem ipsum dolor sit amet, cosectetur adipisicing elit, sed deimod tempor incid-idunt ut dolor sit amet</p>
-                           <a href="feature-details.html" class="btn1"><span>Read More +</span></a>
-                        </div>
-                     </div>
-                  </div>
+                  
                </div>
             </div>
          </div>
@@ -291,34 +251,35 @@
                   <div class="col-sm-12 col-md-12 col-lg-6 order-2 order-lg-1">
                      <div class="home-about-item desk-pad-right-10 pb-30">
                         <h3 class="home-about-title">
-                           A fully integrated suite for Large enterprise
+                           A fully integrated suite for Large Crypto Investment
                         </h3>
                         <p class="home-about-para">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod cste et dolore magnam aliquam quaerat voluptatem.</p>
                         <div class="home-about-list">
                            <div class="home-about-list-item">
                               <img src="assets1/images/check.png" alt="checl">
-                              International Payments
+                              Fiat & Coin Payments
                            </div>
                            <div class="home-about-list-item">
                               <img src="assets1/images/check.png" alt="checl">
-                              Request Features
+                              Multiple Trade Tickets
                            </div>
                            <div class="home-about-list-item">
                               <img src="assets1/images/check.png" alt="checl">
-                              Premium Support
+                              Referral Bonuses
                            </div>
                            <div class="home-about-list-item">
                               <img src="assets1/images/check.png" alt="checl">
-                              Direct Debit
+                              Daily Income Notification
                            </div>
                            <div class="home-about-list-item">
                               <img src="assets1/images/check.png" alt="checl">
-                              Automated Accounting
+                              Credit Verification
                            </div>
                            <div class="home-about-list-item">
                               <img src="assets1/images/check.png" alt="checl">
-                              Web Design
+                              Credit Remittance
                            </div>
+                           
                         </div>
                         <div class="home-about-animation">
                            <div class="home-animation-item">
@@ -338,102 +299,7 @@
                      </div>
                   </div>
                </div>
-               <div class="section-mtb-40"></div>
-               <div class="row align-items-center">
-                  <div class="col-sm-12 col-md-12 col-lg-6">
-                     <div class="home-about-item home-about-image pb-30 about-image-shape">
-                        <div class="home-image-content">
-                           <img src="assets1/images/business.png" alt="about" class="scale-one-zero-one">
-                        </div>
-                     </div>
-                  </div>
-                  <div class="col-sm-12 col-md-12 col-lg-6">
-                     <div class="home-about-item desk-pad-left-10 pb-30">
-                        <h3 class="home-about-title">
-                           Small to medium-sized businesses
-                        </h3>
-                        <p class="home-about-para">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod cste et dolore magnam aliquam quaerat voluptatem.</p>
-                        <div class="home-about-list">
-                           <div class="home-about-list-item">
-                              <img src="assets1/images/check.png" alt="checl">
-                              Deposit Checks Instantly
-                           </div>
-                           <div class="home-about-list-item">
-                              <img src="assets1/images/check.png" alt="checl">
-                              A Powerful Open API
-                           </div>
-                           <div class="home-about-list-item">
-                              <img src="assets1/images/check.png" alt="checl">
-                              Affiliates And Partnerships
-                           </div>
-                           <div class="home-about-list-item">
-                              <img src="assets1/images/check.png" alt="checl">
-                              Coverage Around The World
-                           </div>
-                           <div class="home-about-list-item">
-                              <img src="assets1/images/check.png" alt="checl">
-                              Business Without Borders
-                           </div>
-                           <div class="home-about-list-item">
-                              <img src="assets1/images/check.png" alt="checl">
-                              Web Design
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-               <div class="section-mtb-40"></div>
-               <div class="row align-items-center">
-                  <div class="col-sm-12 col-md-12 col-lg-6 order-2 order-lg-1">
-                     <div class="home-about-item desk-pad-right-10 pb-30">
-                        <h3 class="home-about-title">
-                           Entrepreneurs, and sole traders & Freelancers
-                        </h3>
-                        <p class="home-about-para">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod cste et dolore magnam aliquam quaerat voluptatem.</p>
-                        <div class="home-about-list">
-                           <div class="home-about-list-item">
-                              <img src="assets1/images/check.png" alt="checl">
-                              International Payments
-                           </div>
-                           <div class="home-about-list-item">
-                              <img src="assets1/images/check.png" alt="checl">
-                              Request Features
-                           </div>
-                           <div class="home-about-list-item">
-                              <img src="assets1/images/check.png" alt="checl">
-                              Premium Support
-                           </div>
-                           <div class="home-about-list-item">
-                              <img src="assets1/images/check.png" alt="checl">
-                              Direct Debit
-                           </div>
-                           <div class="home-about-list-item">
-                              <img src="assets1/images/check.png" alt="checl">
-                              Automated Accounting
-                           </div>
-                           <div class="home-about-list-item">
-                              <img src="assets1/images/check.png" alt="checl">
-                              Web Design
-                           </div>
-                        </div>
-                        <div class="home-about-animation">
-                           <div class="home-animation-item">
-                              <img src="assets1/images/curve-line.png" alt="animated-icon">
-                           </div>
-                           <div class="home-animation-item">
-                              <img src="assets1/images/triangle.png" alt="animated-icon">
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-                  <div class="col-sm-12 col-md-12 col-lg-6 order-1 order-lg-2">
-                     <div class="home-about-item home-about-image about-image-rectangle pb-30">
-                        <div class="home-image-content">
-                           <img src="assets1/images/entrepreneur.png" alt="about" class="scale-one-zero-one">
-                        </div>
-                     </div>
-                  </div>
-               </div>
+              
             </div>
          </div>
       </section>
@@ -444,12 +310,12 @@
             </div>
             <div class="counter-content">
                <div class="counter-item">
-                  <h3><span class="counter">70</span><span class="counter-text-lg">+</span></h3>
-                  <p>Contributors</p>
+                  <h3>$<span class="counter">879</span><span class="counter-text-lg">K</span></h3>
+                  <p>Deposits</p>
                </div>
                <div class="counter-item">
-                  <h3><span class="counter">40</span><span class="counter-text-sm">K</span></h3>
-                  <p>Feedback</p>
+                  <h3>$<span class="counter">13.6</span><span class="counter-text-sm">M</span></h3>
+                  <p>Withdrawals</p>
                   <div class="counter-loader">
                      <span></span>
                      <span></span>
@@ -457,8 +323,8 @@
                   </div>
                </div>
                <div class="counter-item">
-                  <h3><span class="counter">1000</span><span class="counter-text-sm">k</span></h3>
-                  <p>Downloaded</p>
+                  <h3>$<span class="counter">17.8</span><span class="counter-text-sm">M</span></h3>
+                  <p>Aggregate Referral Bonuses</p>
                   <div class="counter-loader">
                      <span></span>
                      <span></span>
@@ -466,8 +332,8 @@
                   </div>
                </div>
                <div class="counter-item">
-                  <h3><span class="counter">590</span><span class="counter-text-lg">+</span></h3>
-                  <p>Workers</p>
+                  <h3>$<span class="counter">3.6</span><span class="counter-text-lg">M</span></h3>
+                  <p>Credit Remittances</p>
                   <div class="counter-loader">
                      <span></span>
                      <span></span>
@@ -477,102 +343,11 @@
             </div>
          </div>
       </section>
-      <section class="home-service-section pt-100 pb-70">
-         <div class="container">
-            <div class="home-service-content">
-               <div class="row">
-                  <div class="col-sm-12 col-md-12 col-lg-4">
-                     <div class="home-service-item fluid-height">
-                        <div class="home-service-start full-height">
-                           <h2>Entirely providing best services</h2>
-                           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit sed do eiusmod agnamqua ptatem consectetur.</p>
-                           <a href="services.html" class="btn1 blue-gradient btn-with-image">
-                           <i class="flaticon-login"></i>
-                           <i class="flaticon-login"></i>
-                           Get Started
-                           </a>
-                        </div>
-                     </div>
-                  </div>
-                  <div class="col-sm-12 col-md-6 col-lg-4">
-                     <div class="home-service-item fluid-height">
-                        <div class="home-service-details full-height">
-                           <div class="home-service-image">
-                              <img src="assets1/images/service1.png" alt="service">
-                           </div>
-                           <div class="home-service-text">
-                              <h3>Drag and drop functionality</h3>
-                              <p>Lorem ipsum dolor sit amet, cosectetur adipisicing elit, sed deimod empor inddunt ut ualor sit amet</p>
-                              <a href="service-details.html">Read More +</a>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-                  <div class="col-sm-12 col-md-6 col-lg-4">
-                     <div class="home-service-item fluid-height">
-                        <div class="home-service-details full-height">
-                           <div class="home-service-image">
-                              <img src="assets1/images/service2.png" alt="service">
-                           </div>
-                           <div class="home-service-text">
-                              <h3>Email notifications</h3>
-                              <p>Lorem ipsum dolor sit amet, cosectetur adipisicing elit, sed deimod empor inddunt ut ualor sit amet</p>
-                              <a href="service-details.html">Read More +</a>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-                  <div class="col-sm-12 col-md-6 col-lg-4">
-                     <div class="home-service-item fluid-height">
-                        <div class="home-service-details full-height">
-                           <div class="home-service-image">
-                              <img src="assets1/images/service3.png" alt="service">
-                           </div>
-                           <div class="home-service-text">
-                              <h3>Deadline reminders</h3>
-                              <p>Lorem ipsum dolor sit amet, cosectetur adipisicing elit, sed deimod empor inddunt ut ualor sit amet</p>
-                              <a href="service-details.html">Read More +</a>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-                  <div class="col-sm-12 col-md-6 col-lg-4">
-                     <div class="home-service-item fluid-height">
-                        <div class="home-service-details full-height">
-                           <div class="home-service-image">
-                              <img src="assets1/images/service4.png" alt="service">
-                           </div>
-                           <div class="home-service-text">
-                              <h3>Simple dashboard</h3>
-                              <p>Lorem ipsum dolor sit amet, cosectetur adipisicing elit, sed deimod empor inddunt ut ualor sit amet</p>
-                              <a href="service-details.html">Read More +</a>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-                  <div class="col-sm-12 offset-md-3 col-md-6 offset-lg-0 col-lg-4">
-                     <div class="home-service-item fluid-height">
-                        <div class="home-service-details full-height">
-                           <div class="home-service-image">
-                              <img src="assets1/images/service5.png" alt="service">
-                           </div>
-                           <div class="home-service-text">
-                              <h3>Incredible infrastructure</h3>
-                              <p>Lorem ipsum dolor sit amet, cosectetur adipisicing elit, sed deimod empor inddunt ut ualor sit amet</p>
-                              <a href="service-details.html">Read More +</a>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-            </div>
-         </div>
-      </section>
+       
       <section class="home-pricing-section p-tb-100">
          <div class="container">
             <div class="section-title">
-               <h2>Our Reasonable Pricing</h2>
-               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod labore et dolore magnam aliquam quaerat voluptatem. </p>
+               <h2>Our Trading Packs</h2>
             </div>
             <div class="home-pricing-content">
                <div class="home-pricing-category">
@@ -580,53 +355,35 @@
                      <thead>
                         <tr class="orange-gradient">
                            <th class="t-align-left">Pricing list</th>
-                           <th>Business main</th>
-                           <th>Householder</th>
-                           <th>Freelancer</th>
+                           <th>Gold</th>
+                           <th>Professional</th>
+                           <th>Promo</th>
                         </tr>
                      </thead>
                      <tbody>
                         <tr>
-                           <td class="pricing-name blue-gradient"><img src="assets1/images/check-white.png" alt="check">Technical support over IRC</td>
-                           <td><span class="price-availability availability-orange-dark"><i class='bx bx-check'></i></span></td>
-                           <td><span class="price-availability availability-orange-dark"><i class='bx bx-check'></i></span></td>
-                           <td><span class="price-availability availability-orange-dark"><i class='bx bx-check'></i></span></td>
+                           <td class="pricing-name blue-gradient"><img src="assets1/images/check-white.png" alt="check">Minimum</td>
+                           <td><span class="">$100</span></td>
+                           <td><span class="">$5,000</span></td>
+                           <td><span class="">$10,000</span></td>
                         </tr>
                         <tr>
-                           <td class="pricing-name blue-gradient"><img src="assets1/images/check-white.png" alt="check">Control payout timing</td>
-                           <td><span class="price-availability availability-orange-light"><i class='bx bx-x'></i></span></td>
-                           <td><span class="price-availability availability-orange-light"><i class='bx bx-x'></i></span></td>
-                           <td><span class="price-availability availability-orange-light"><i class='bx bx-x'></i></span></td>
+                           <td class="pricing-name blue-gradient"><img src="assets1/images/check-white.png" alt="check">Maximum</td>
+                           <td><span class="">$5,000</span></td>
+                           <td><span class="">$10,000</span></td>
+                           <td><span class="">$200,000</span></td>
                         </tr>
                         <tr>
-                           <td class="pricing-name blue-gradient"><img src="assets1/images/check-white.png" alt="check">Automate evidence submission</td>
-                           <td><span class="price-availability availability-blue"><i class='bx bx-check'></i></span></td>
-                           <td><span class="price-availability availability-blue"><i class='bx bx-check'></i></span></td>
-                           <td><span class="price-availability availability-blue"><i class='bx bx-check'></i></span></td>
+                           <td class="pricing-name blue-gradient"><img src="assets1/images/check-white.png" alt="check">Interest Rate</td>
+                           <td>2%</span></td>
+                           <td>5%</span></td>
+                           <td>10%</span></td>
                         </tr>
                         <tr>
-                           <td class="pricing-name blue-gradient"><img src="assets1/images/check-white.png" alt="check">Collaboration notes</td>
-                           <td><span class="price-availability availability-orange-dark"><i class='bx bx-check'></i></span></td>
-                           <td><span class="price-availability availability-orange-dark"><i class='bx bx-check'></i></span></td>
-                           <td><span class="price-availability availability-orange-dark"><i class='bx bx-check'></i></span></td>
-                        </tr>
-                        <tr>
-                           <td class="pricing-name blue-gradient"><img src="assets1/images/check-white.png" alt="check">Transparent payouts</td>
-                           <td><span class="price-availability availability-orange-light"><i class='bx bx-x'></i></span></td>
-                           <td><span class="price-availability availability-orange-light"><i class='bx bx-x'></i></span></td>
-                           <td><span class="price-availability availability-orange-light"><i class='bx bx-x'></i></span></td>
-                        </tr>
-                        <tr>
-                           <td class="pricing-name blue-gradient"><img src="assets1/images/check-white.png" alt="check">24×7 support</td>
-                           <td><span class="price-availability availability-green"><i class='bx bx-check'></i></span></td>
-                           <td><span class="price-availability availability-green"><i class='bx bx-check'></i></span></td>
-                           <td><span class="price-availability availability-green"><i class='bx bx-check'></i></span></td>
-                        </tr>
-                        <tr>
-                           <td class="pricing-name blue-gradient"><img src="assets1/images/check-white.png" alt="check">Cognitive Management</td>
-                           <td><span class="price-availability availability-orange-dark"><i class='bx bx-check'></i></span></td>
-                           <td><span class="price-availability availability-orange-dark"><i class='bx bx-check'></i></span></td>
-                           <td><span class="price-availability availability-orange-dark"><i class='bx bx-check'></i></span></td>
+                           <td class="pricing-name blue-gradient"><img src="assets1/images/check-white.png" alt="check">Investment Span</td>
+                           <td>30 Days</span></td>
+                           <td>180 Days (6 Months)</span></td>
+                           <td>360 Days (1 Year)</span></td>
                         </tr>
                      </tbody>
                   </table>
@@ -651,10 +408,10 @@
                         <div class="home-facility-item pb-30">
                            <div class="home-facility-details">
                               <div class="home-service-start">
-                                 <h2>Payment gateway is easy to fill with our system</h2>
-                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod cste et dolore magnam aliquam quaerat voluptatem.</p>
-                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim numquam eius modi tempora incidunt ut labore et dolore magnam </p>
-                                 <a href="#" class="btn1 blue-gradient btn-with-image">
+                                 <h2>Our Expertise. Know More About What We Do</h2>
+                                 <p>We are one of the oldest and leading multi asset alternative investment firms. It’s not a private firm because we don’t operate the CEO system but President. Our global team aligns our interests with those of our investors and partners for lasting impact.</p>
+                                 <p>We as a private partnership focused on deploying management consulting strategy to private equity investing. Since our founding, Fortune Financial Services has remained highly aligned to our limited partners and grown to become one of the world’s largest, multi-asset investment firms. We are a Finra regulated brokerage firm with license to trade in the New York stocks exchange.</p>
+                                 <a href="{{ route('register') }}" class="btn1 blue-gradient btn-with-image">
                                  <i class="flaticon-login"></i>
                                  <i class="flaticon-login"></i>
                                  Get Started
@@ -675,202 +432,8 @@
             </div>
          </div>
       </section>
-      <section class="home-quick-contact-section section-minus-margin">
-         <div class="container">
-            <div class="home-quick-contact blue-gradient">
-               <div class="logo-bg-icon">
-                  <div class="logo-bg-item">
-                     <img src="assets1/images/circle.png" alt="icon">
-                  </div>
-                  <div class="logo-bg-item">
-                     <img src="assets1/images/square.png" alt="icon">
-                  </div>
-               </div>
-               <div class="quick-contact-inner">
-                  <h2>What’s thinking? <br> don’t worry! get connected us</h2>
-                  <p>*We’re willingly is here to answer your question about Aila</p>
-                  <ul class="section-button">
-                     <li>
-                        <a href="contact-us.html" class="btn1 orange-gradient btn-with-image">
-                        <i class="flaticon-agenda"></i>
-                        <i class="flaticon-agenda"></i>
-                        Contact Us
-                        </a>
-                     </li>
-                     <li>
-                        <button class="btn1 btn-with-image">
-                        <i class="flaticon-approval"></i>
-                        <i class="flaticon-approval"></i>
-                        Free Trial
-                        </button>
-                     </li>
-                  </ul>
-               </div>
-            </div>
-         </div>
-      </section>
-      <div class="home-logo-section bg-off-white">
-         <div class="container">
-            <div class="home-logo-content">
-               <div class="home-logo-item">
-                  <a href="#"><img src="assets1/images/logo-1.png" alt="logo"></a>
-               </div>
-               <div class="home-logo-item">
-                  <a href="#"><img src="assets1/images/logo-2.png" alt="logo"></a>
-               </div>
-               <div class="home-logo-item">
-                  <a href="#"><img src="assets1/images/logo-3.png" alt="logo"></a>
-               </div>
-               <div class="home-logo-item">
-                  <a href="#"><img src="assets1/images/logo-4.png" alt="logo"></a>
-               </div>
-               <div class="home-logo-item">
-                  <a href="#"><img src="assets1/images/logo-5.png" alt="logo"></a>
-               </div>
-               <div class="home-logo-item">
-                  <a href="#"><img src="assets1/images/logo-6.png" alt="logo"></a>
-               </div>
-               <div class="home-logo-item">
-                  <a href="#"><img src="assets1/images/logo-7.png" alt="logo"></a>
-               </div>
-               <div class="home-logo-item">
-                  <a href="#"><img src="assets1/images/logo-8.png" alt="logo"></a>
-               </div>
-               <div class="home-logo-item">
-                  <a href="#"><img src="assets1/images/logo-9.png" alt="logo"></a>
-               </div>
-               <div class="home-logo-item">
-                  <a href="#"><img src="assets1/images/logo-10.png" alt="logo"></a>
-               </div>
-            </div>
-         </div>
-      </div>
-      <section class="home-client-section pt-100 pb-50">
-         <div class="container">
-            <div class="section-title">
-               <h2>Clients Feedback</h2>
-               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore </p>
-            </div>
-            <div class="client-carousel-content">
-               <div class="client-carousel owl-carousel owl-theme">
-                  <div class="item">
-                     <div class="row">
-                        <div class="col-sm-12 col-md-12 col-lg-5">
-                           <div class="client-carousel-thumb">
-                              <div class="client-carousel-icon">
-                                 <div class="carousel-icon-item">
-                                    <img src="assets1/images/carousel-sqare.png" alt="icon">
-                                 </div>
-                                 <div class="carousel-icon-item">
-                                    <img src="assets1/images/carousel-curve.png" alt="icon">
-                                 </div>
-                                 <div class="carousel-icon-item">
-                                    <img src="assets1/images/carousel-round.png" alt="icon">
-                                 </div>
-                              </div>
-                              <div class="client-carousel-img">
-                                 <img src="assets1/images/carousel-1.png" alt="client">
-                              </div>
-                           </div>
-                        </div>
-                        <div class="col-sm-12 col-md-12 col-lg-7">
-                           <div class="client-carousel-caption">
-                              <p class="client-caption-para">Awesome dolor sit amet, consectetur adipisicing elit sed do eusmod tempor incididunt ut labore et dolore magna aliquaenminim veniam quis nostrud dolore magn doloreut labore dolore magn.</p>
-                              <h3 class="client-caption-title">Devit M. kolin</h3>
-                              <h4 class="client-caption-designation">CEO & Founder</h4>
-                           </div>
-                           <div class="client-carousel-control">
-                              <button class="carousel-control-item carousel-control-item-left">
-                              <span><i class="flaticon-right-arrow"></i></span>
-                              </button>
-                              <button class="carousel-control-item carousel-control-item-right">
-                              <span><i class="flaticon-left-arrow"></i></span>
-                              </button>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-                  <div class="item">
-                     <div class="row">
-                        <div class="col-sm-12 col-md-12 col-lg-5">
-                           <div class="client-carousel-thumb">
-                              <div class="client-carousel-icon">
-                                 <div class="carousel-icon-item">
-                                    <img src="assets1/images/carousel-sqare.png" alt="icon">
-                                 </div>
-                                 <div class="carousel-icon-item">
-                                    <img src="assets1/images/carousel-curve.png" alt="icon">
-                                 </div>
-                                 <div class="carousel-icon-item">
-                                    <img src="assets1/images/carousel-round.png" alt="icon">
-                                 </div>
-                              </div>
-                              <div class="client-carousel-img">
-                                 <img src="assets1/images/carousel-2.png" alt="client">
-                              </div>
-                           </div>
-                        </div>
-                        <div class="col-sm-12 col-md-12 col-lg-7">
-                           <div class="client-carousel-caption">
-                              <p class="client-caption-para">Very ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae.</p>
-                              <h3 class="client-caption-title">Sienna Miller</h3>
-                              <h4 class="client-caption-designation">CTO</h4>
-                           </div>
-                           <div class="client-carousel-control">
-                              <button class="carousel-control-item carousel-control-item-left">
-                              <span><i class="flaticon-right-arrow"></i></span>
-                              </button>
-                              <button class="carousel-control-item carousel-control-item-right">
-                              <span><i class="flaticon-left-arrow"></i></span>
-                              </button>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-            </div>
-         </div>
-      </section>
-      <section class="home-download-section border-top-mob pt-100 pb-70">
-         <div class="container">
-            <div class="home-download-content">
-               <div class="row align-items-center">
-                  <div class="col-sm-12 col-md-12 col-lg-6 order-lg-2">
-                     <div class="home-download-item pb-30">
-                        <div class="home-download-image">
-                           <img src="assets1/images/download.png" alt="smartphone">
-                        </div>
-                     </div>
-                  </div>
-                  <div class="col-sm-12 col-md-12 col-lg-6 order-lg-1">
-                     <div class="home-download-item pb-30">
-                        <div class="home-download-details home-service-start desk-pad-right-20">
-                           <h2>Free app download now get sit back & enjoy</h2>
-                           <p>Lorem ipsum dolor sit amet, cons1ectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim numquam eius modi tempora incidunt ut labore et dolore magnam</p>
-                           <div class="download-option">
-                              <p>Download the app</p>
-                              <ul class="download-option-list">
-                                 <li>
-                                    <a href="#" class="orange-gradient">
-                                    <img src="assets1/images/apple.png" alt="apple">
-                                    <img src="assets1/images/apple.png" alt="apple">
-                                    </a>
-                                 </li>
-                                 <li>
-                                    <a href="#" class="blue-gradient">
-                                    <img src="assets1/images/android.png" alt="android">
-                                    <img src="assets1/images/android.png" alt="android">
-                                    </a>
-                                 </li>
-                              </ul>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-            </div>
-         </div>
-      </section>
+      
+       
       <section class="home-contact-section overflow-hidden blue-gradient pt-100 pb-80">
          <div class="home-contact-bg-circle">
             <div class="home-contact-circle-item">
@@ -882,11 +445,10 @@
          </div>
          <div class="container">
             <div class="home-contact-inner">
-               <h2>493 businesses! create your bank account now</h2>
-               <p>What’s next in Aila Bank? <a href="#">Learn More</a></p>
+               <h2>367K Stakeholders! Join Blendconsults now</h2>
                <ul class="section-button">
                   <li>
-                     <a href="authentication.html" class="btn1 orange-gradient btn-with-image">
+                     <a href="{{ route('register') }}" class="btn1 orange-gradient btn-with-image">
                      <i class="flaticon-agenda"></i>
                      <i class="flaticon-agenda"></i>
                      Create Your Account
@@ -903,10 +465,10 @@
                   <div class="col-sm-12 col-md-12 col-lg-4">
                      <div class="footer-content-item">
                         <div class="footer-logo">
-                           <a href="index.html"><img src="assets1/images/logo-white.png" alt="logo"></a>
+                           <a href="/"><img src="blendconsults.png" alt="logo"></a>
                         </div>
                         <div class="footer-details">
-                           <p>Lorem ipsum dolor sit amet, consectetur adiisicing elit, sed do eiusmod tempor inc Neque porro quisquam est qui dolorem aliquam quaerat luptatem. sed do eiusmod tempor inc </p>
+                           <p>We are investment management company regulated and approved by Finra. Our company is aimed to be one of the leading investment company globally having a professional team of experts with a 20 years of combined experience thereby providing innovative investment products that meet the specific needs of the online community. </p>
                         </div>
                      </div>
                   </div>
@@ -919,7 +481,6 @@
                            <li><a href="faqs.html">FAQ's</a></li>
                            <li><a href="privacy-policy.html">Privacy Policy</a></li>
                            <li><a href="terms-conditions.html">Terms & Conditions</a></li>
-                           <li><a href="blogs.html">Blogs</a></li>
                            <li><a href="contact-us.html">Contact Us</a></li>
                         </ul>
                      </div>
@@ -934,7 +495,6 @@
                            <li><a href="services.html">Services</a></li>
                            <li><a href="features.html">Features</a></li>
                            <li><a href="pricing.html">Our Pricing</a></li>
-                           <li><a href="blogs.html">Blogs</a></li>
                         </ul>
                      </div>
                   </div>
