@@ -515,9 +515,9 @@
             </div>
             <div class="footer-lower">
                <div class="footer-lower-item footer-copyright-text">
-                  <p>Copyright ©2021 Design & Developed by <a href="https://hibootstrap.com/" target="_blank">HiBootstrap</a></p>
+                  <p>Copyright © {{date('Y')}} Blendconsults LLC </p>
                </div>
-               <div class="footer-lower-item footer-social-logo">
+               {{-- <div class="footer-lower-item footer-social-logo">
                   <ul class="footer-social-list">
                      <li class="social-btn social-btn-fb"><a href="#"><i class='bx bxl-facebook'></i></a></li>
                      <li class="social-btn social-btn-tw"><a href="#"><i class='bx bxl-twitter'></i></a></li>
@@ -525,7 +525,7 @@
                      <li class="social-btn social-btn-pin"><a href="#"><i class='bx bxl-pinterest-alt'></i></a></li>
                      <li class="social-btn social-btn-yt"><a href="#"><i class='bx bxl-youtube'></i></a></li>
                   </ul>
-               </div>
+               </div> --}}
             </div>
          </div>
       </footer>
