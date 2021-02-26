@@ -17,6 +17,22 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/aboutus', function() {
+    return view('aboutus');
+})->name('aboutus');
+
+Route::get('/pricing', function() {
+    return view('pricing');
+})->name('pricing');
+
+Route::get('/faq', function() {
+    return view('faq');
+})->name('faq');
+
+Route::get('/privacy', function() {
+    return view('privacy');
+})->name('privacy');
+
 Auth::routes(['verify' => true]);
 
 Route::group(['middleware' => ['auth', 'verified']], function () {
