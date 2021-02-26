@@ -143,7 +143,7 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">
+                <a class="nav-link" href="{{ route('logout') }}">
                   <i class="menu-icon typcn typcn-user-outline"></i>
                   <span class="menu-title">Sign Out</span>
                 </a>
