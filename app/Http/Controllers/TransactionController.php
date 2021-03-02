@@ -128,6 +128,55 @@ class TransactionController extends Controller
         return view('deposit-history')->with(['deposits' => $deposits]);
     }
 
+    public function adminDeposits(Request $request)
+    {
+        if(auth()->user()->is_admin) {
+            $deposits = Deposit::with(['user', 'plan', 'proofs', 'trx'])
+                ->orderBy('id', 'DESC')->paginate(15);
+            // return $deposits;
+            return view('admin-deposits')->with(['deposits' => $deposits]);
+        } else {
+            abort(404);
+        }
+    }
+    
+    public function adminConfirmDeposits(Request $request) {
+        if(auth()->user()->is_admin) {
+            $deposit = Deposit::where(['id' => $request->id])
+                ->update(['status' => $request->status]);
+            if($deposit) {
+                $d = Deposit::find($request->id);
+                $user_id = $d->user_id;
+              
+                $referral = Referral::where(['user_id' => $user_id, 'has_injected' => 0])
+                    ->get()
+                    ->first();  
+                    if(!is_null($referral)) {
+                        $referrer_id = $referral->referrer_id;
+                        $last_approved_deposit = Deposit::where(['user_id' => $referral->referral_id, 'status' => 'Approved'])
+                            ->get()
+                            ->first(); 
+                        if(!is_null($last_approved_deposit)) {
+                            $amount = $d->amount;
+                            $bonus = $amount * 0.10;
+                            $org_bonus = $bonus + $last_approved_deposit->due_amount;
+                            Deposit::find($last_approved_deposit->id)
+                                ->update(['due_amount' => $org_bonus]);
+                            Referral::find($referral->id)
+                                ->update(['has_injected' => 1]);
+                        }
+                    }
+               
+                // check for approved deposit 
+                $request->session()->flash('success', 'Deposit status: '. $request->status);
+            }
+            
+            return redirect()->back();
+        } else {
+            abort(404);
+        }
+    }
+
     public function all(Request $request)
     {
         $trxs = Transaction::where(['user_id' => auth()->user()->id])
