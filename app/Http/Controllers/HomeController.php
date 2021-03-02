@@ -8,6 +8,7 @@ use Illuminate\Http\Request;
 
 use App\Deposit;
 use App\Transaction;
+use App\Packages;
 
 class HomeController extends Controller
 {
@@ -55,17 +56,82 @@ class HomeController extends Controller
         $income_btc = $income / $xrate;
 
         $referral_count = $this->getReferralCount(auth()->user()->id);
-        return view('home')->with([
-            'xrate' => number_format($xrate, 2, '.', ','),
-            'deposit' => number_format($deposit, 6, '.', ','),
-            'income' => number_format($income, 2, '.', ', '),
-            'income_btc' => number_format($income_btc, 6, '.', ', '),
-            'current_investment' => number_format($current_investment, 2, '.', ', '),
-            'current_investment_btc' => number_format($current_investment_btc, 6, '.', ', '),
-            'plan' =>  $plan,
-            'deposits' =>  $deposits,
-            'referral_count' => $referral_count
-        ]);
+
+        if(auth()->user()->is_admin) {
+            $plans = \App\Packages::all();
+            
+           
+            return view('admin-home')->with([
+                'xrate' => number_format($xrate, 2, '.', ','),
+                'plans' =>  $plans,
+                 
+            ]);
+        }else {
+            return view('home')->with([
+                'xrate' => number_format($xrate, 2, '.', ','),
+                'deposit' => number_format($deposit, 6, '.', ','),
+                'income' => number_format($income, 2, '.', ', '),
+                'income_btc' => number_format($income_btc, 6, '.', ', '),
+                'current_investment' => number_format($current_investment, 2, '.', ', '),
+                'current_investment_btc' => number_format($current_investment_btc, 6, '.', ', '),
+                'plan' =>  $plan,
+                'deposits' =>  $deposits,
+                'referral_count' => $referral_count
+            ]);
+        }
+    }
+
+    public function editPlan(Request $request, $id)
+    {
+        if(auth()->user()->is_admin) {
+            $plan = \App\Packages::find($id);
+        
+            return view('admin-plan-edit')->with(['p'=> $plan]);
+        } else {
+            abort(404);
+        }
+    }
+    
+    public function editPlanSubmit(Request $request)
+    {
+        if(auth()->user()->is_admin) {
+            $attr = $request->except('_token', 'submit');
+            Packages::where(['id' => $attr['id']])
+                ->update($attr);
+            // dd($attr);
+            $request->session()->flash('success', 'Package updated successfully!');
+            return redirect("home");
+        } else {
+            abort(404);
+        }
+    }
+
+    public function userDelete(Request $request) {
+        if(auth()->user()->is_admin) {
+            
+            \App\Referral::where(['user_id' => $request->id])->delete();
+            \App\Referral::where(['referral_id' => $request->id])->delete();
+            \App\Transaction::where(['user_id' => $request->id])->delete();
+            \App\DepositProof::where(['user_id' => $request->id])->delete();
+            \App\Deposit::where(['user_id' => $request->id])->delete();
+            
+            \App\User::find($request->id)->delete();
+            $request->session()->flash('success', 'User deleted successfully!');
+            return redirect()->back();
+        } else {
+            abort(404);
+        }
+    }
+
+    public function getUsers(Request $request)
+    {
+        if(auth()->user()->is_admin) {
+            $users = \App\User::orderBy('id', 'DESC')->get();
+        
+            return view('admin-users')->with(['users'=> $users]);
+        } else {
+            abort(404);
+        }
     }
 
     public function deposit() 

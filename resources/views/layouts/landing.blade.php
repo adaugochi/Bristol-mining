@@ -41,6 +41,7 @@
          </div>
       </div>
       <div class="fixed-top">
+         
          <div class="navbar-area">
             <div class="mobile-nav">
                <a href="/" class="logo">
@@ -57,6 +58,7 @@
             </div>
             <div class="main-nav">
                <div class="container-fluid">
+                  
                   <nav class="navbar navbar-expand-md navbar-light">
                      <a class="navbar-brand" href="/">
                      <img src="{{ asset('blendconsults.png') }}" style="width: 80px;margin-left:30px;" alt="logo">
@@ -92,6 +94,15 @@
                            <i class="flaticon-login"></i>
                            Sign Up / Login
                            </a>
+                           <div class="row">
+                              <div class="col-lg-12">
+                                  <script type="text/javascript">
+                                      function googleTranslateElementInit() { new google.translate.TranslateElement({ pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE, autoDisplay: false, includedLanguages: '' }, 'google_translate_element'); }
+                                  </script>
+                                  <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+                                  <div id="google_translate_element" class="mt-1 pull-right" style="height:1%;"></div>
+                              </div>
+                          </div>
                         </div>
                      </div>
                   </nav>

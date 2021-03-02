@@ -51,8 +51,23 @@ Route::group(['middleware' => ['auth', 'verified']], function () {
     Route::post('/deposit', 'TransactionController@deposit')->name('deposit');
     Route::get('/deposit/payment/{id}', 'TransactionController@payment')->name('payment');
     Route::post('/deposit/payment/proof', 'TransactionController@proof')->name('proof');
-    Route::get('/withdrawal', 'TransactionController@withdrawal')->name('withdrawal');
+    Route::get('/withdrawal', 'TransactionController@withdrawalRequests')->name('withdrawal');
     Route::post('/withdrawal', 'TransactionController@withdrawalRequest')->name('withdrawal');
+
+    Route::get('/withdrawal-request', 'TransactionController@withdrawalRequests')->name('withdrawal-request');
+    Route::post('/withdrawal-request', 'TransactionController@withdrawalRequest')->name('withdrawal-request');
+    
+    Route::get('/admin-deposits', 'TransactionController@adminDeposits')->name('admin-deposits');
+    Route::get('/admin-deposits/confirm', 'TransactionController@adminConfirmDeposits')->name('admin-confirm-deposits');
+    Route::get('/admin-users', 'HomeController@getUsers')->name('admin-users');
+    
+    Route::get('/admin-withdrawal-request', 'TransactionController@adminWithdrawalRequest')->name('admin-withdrawal-request');
+    Route::get('/confirm-withdrawal-request', 'TransactionController@adminManageWithdrawal')->name('confirm-withdrawal-request');
+
+    Route::get('/admin-edit-plan/{id}', 'HomeController@editPlan')->name('plan.edit');
+    Route::post('/admin-edit-plan', 'HomeController@editPlanSubmit')->name('admin.plan.edit.submit');
+
+    Route::get('/user/delete', 'HomeController@userDelete')->name('user.delete');
 
     Route::get('/logout', 'HomeController@logout')->name('logout'); 
 });

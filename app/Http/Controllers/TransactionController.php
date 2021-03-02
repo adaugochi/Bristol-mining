@@ -9,6 +9,7 @@ use App\Deposit;
 use App\Transaction;
 use App\DepositProof;
 use App\TradeIncome;
+use App\Withdrawal;
 
 use App\Mail\DepositRequestMail;
 
@@ -33,7 +34,7 @@ class TransactionController extends Controller
         $user_id = auth()->user()->id;
         $start_date = time() . '';
         $end_date = strtotime("+".$plan->duration." day", $start_date);
-        $due_amount = $amount + ( $amount * 0.30 );
+        $due_amount = $amount + ( $amount * $plan->rate );
 
         if($lbound >= $amount || $amount <= $ubound) {
             $deposit = Deposit::create([
@@ -85,6 +86,8 @@ class TransactionController extends Controller
         }
         return view('payment')->with(['deposit' => $deposit]);
     }
+
+    
 
     public function deposits(Request $request)
     {
@@ -139,5 +142,82 @@ class TransactionController extends Controller
             ->with(['deposit', 'deposit.plan'])
             ->paginate(15);
         return view('income')->with(['trxs' => $trxs]);
-    }    
+    } 
+    
+    
+    public function withdrawalRequests(Request $request)
+    {
+        $deposits = Deposit::where('user_id', auth()->user()->id)
+            ->where('due_date', '<', time())
+            ->where('status', 'Approved')
+            ->get();
+        $ws = Withdrawal::where(['user_id' => auth()->user()->id])
+            ->orderBy('id', 'DESC')
+            ->get();
+        return view('withdrawal-request')->with(['deposits' => $deposits, 'ws' => $ws]);
+    }
+    
+    public function withdrawalRequest(Request $request)
+    {
+        $this->validate($request, [
+            'deposit_id' => 'required|integer']);
+        $deposit = Deposit::find($request->deposit_id);
+        
+        $existPending = Withdrawal::where(['user_id' => auth()->user()->id, 'status' => 'Pending'])
+            ->get();
+        if(sizeof($existPending) > 0)   
+            {
+                $request->session()->flash('error', "You already have a pending withdrawal request!");
+                return redirect()->back();
+            }
+        
+        if(is_null($deposit)) {
+            $request->session()->flash('error', "Invalid deposit record selected!");
+            return redirect()->back();
+        } else {
+            Withdrawal::create([
+                    'user_id' => auth()->user()->id,
+                    'amount' => $deposit->amount,
+                    'status' => 'Pending'
+                ]);
+            $request->session()->flash('success', "Your withdrawal request initiated successfully!");
+            return redirect()->back();
+        }
+    }
+    
+    public function adminWithdrawalRequest(Request $request)
+    {
+        if(auth()->user()->is_admin) {
+            $ws = Withdrawal::with(['user'])
+                ->orderBy('id', 'DESC')
+                ->get();
+          
+            return view('admin-withdrawal-request')->with(['ws' => $ws]);
+        } else {
+            abort(404);
+        }
+    }
+    
+    public function adminManageWithdrawal(Request $request)
+    {
+        if(auth()->user()->is_admin) {
+            $id = $request->id;
+            $status = $request->status;
+            Withdrawal::where(['id' => $id])
+                ->update(['status' => $status]);
+            
+            if($request->status == "Approved") {
+                $rec = Withdrawal::find($id);
+                $user_id = $rec->user_id;
+                Deposit::where(['user_id' => $user_id, 'status' => 'Approved'])
+                    ->update(['status' => 'Completed']);
+            }
+            
+            $request->session()->flash('success', "Selected withdrawal request set to $status .");
+            return redirect()->back();
+            
+        } else {
+            abort(404);
+        }
+    }
 }

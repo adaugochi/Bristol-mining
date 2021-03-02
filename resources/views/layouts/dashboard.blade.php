@@ -93,6 +93,7 @@
                   <span class="menu-title">Dashboard</span>
                 </a>
               </li>
+              @if(!Auth::user()->is_admin)
               <li class="nav-item">
                 <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
                   <i class="menu-icon typcn typcn-coffee"></i>
@@ -108,7 +109,7 @@
                       <a class="nav-link" href="{{ route('deposits.history') }}">Purchased Packages</a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="#">Withdrawal Request</a>
+                      <a class="nav-link" href="{{ route('withdrawal') }}">Withdrawal Request</a>
                     </li>
                     <li class="nav-item">
                       <a class="nav-link" href="{{ route('transactions') }}">Transactions</a>
@@ -136,6 +137,29 @@
                   <span class="menu-title">Referrals</span>
                 </a>
               </li>
+              
+              @else 
+              <li class="nav-item">
+                <a class="nav-link" href="{{ route('admin-deposits') }}">
+                  {{-- <i class="menu-icon typcn typcn-bell"></i> --}}
+                  <span class="menu-title">Deposit</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{{ route('admin-users') }}">
+                  {{-- <i class="menu-icon typcn typcn-bell"></i> --}}
+                  <span class="menu-title">Users</span>
+                </a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="{{ route('admin-withdrawal-request') }}">
+                  {{-- <i class="menu-icon typcn typcn-bell"></i> --}}
+                  <span class="menu-title">Withdrawal Requests</span>
+                </a>
+              </li>
+
+              @endif
               <li class="nav-item">
                 <a class="nav-link" href="{{ route('profile') }}">
                   <i class="menu-icon typcn typcn-bell"></i>
