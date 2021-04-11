@@ -20,8 +20,8 @@
                                     </div>
                                 </div>
                                 <div class="uk-width-1-2@s">
-                                    <img class="in-slide-img" src="{{ asset('Liquid/images/invest.png') }}"
-                                         data-src="Liquid/images/invest.png"
+                                    <img class="in-slide-img" src="{{ asset('liquid/images/invest.png') }}"
+                                         data-src="liquid/images/invest.png"
                                          alt="image-slide" width="500" height="400" data-uk-img>
                                 </div>
                             </div>
@@ -42,8 +42,8 @@
                                     </div>
                                 </div>
                                 <div class="uk-width-1-2@s">
-                                    <img class="in-slide-img" src="{{ asset('Liquid/images/guidance.png') }}" width="500"
-                                         data-src="Liquid/images/guidance.png" alt="image-slide"  height="400" data-uk-img>
+                                    <img class="in-slide-img" src="{{ asset('liquid/images/guidance.png') }}" width="500"
+                                         data-src="liquid/images/guidance.png" alt="image-slide"  height="400" data-uk-img>
                                 </div>
                             </div>
                         </div>
@@ -63,8 +63,8 @@
                                     </div>
                                 </div>
                                 <div class="uk-width-1-2@s">
-                                    <img class="in-slide-img" src="{{ asset('Liquid/images/join-us.png') }}" width="500"
-                                         data-src="Liquid/images/join-us.png" alt="image-slide"  height="400" data-uk-img>
+                                    <img class="in-slide-img" src="{{ asset('liquid/images/join-us.png') }}" width="500"
+                                         data-src="liquid/images/join-us.png" alt="image-slide"  height="400" data-uk-img>
                                 </div>
                             </div>
                         </div>
@@ -78,40 +78,40 @@
                     <div class="uk-container">
                         <ul class="uk-grid uk-child-width-1-5@m uk-text-center" data-uk-grid>
                             <li>
-                                <img src="{{ asset('Liquid/images/in-liquid-ticker-1.svg') }}"
-                                     data-src="Liquid/images" alt="ticker-image"
+                                <img src="{{ asset('liquid/images/in-liquid-ticker-1.svg') }}"
+                                     data-src="liquid/images" alt="ticker-image"
                                      data-width data-height data-uk-img>
                                 <span class="uk-label uk-label-success uk-margin-left">
                                     <i class="fas fa-caret-up"></i>1,740.05
                                 </span>
                             </li>
                             <li>
-                                <img src="{{ asset('Liquid/images/in-liquid-ticker-2.svg') }}"
-                                     data-src="Liquid/images/in-liquid-ticker-2.svg" alt="ticker-image"
+                                <img src="{{ asset('liquid/images/in-liquid-ticker-2.svg') }}"
+                                     data-src="liquid/images/in-liquid-ticker-2.svg" alt="ticker-image"
                                      data-width data-height data-uk-img>
                                 <span class="uk-label uk-label-success uk-margin-left">
                                     <i class="fas fa-caret-up"></i>217.90
                                 </span>
                             </li>
                             <li>
-                                <img src="{{ asset('Liquid/images/in-liquid-ticker-3.svg') }}"
-                                     data-src="Liquid/images/in-liquid-ticker-3.svg" alt="ticker-image"
+                                <img src="{{ asset('liquid/images/in-liquid-ticker-3.svg') }}"
+                                     data-src="liquid/images/in-liquid-ticker-3.svg" alt="ticker-image"
                                      data-width data-height data-uk-img>
                                 <span class="uk-label uk-label-danger uk-margin-left">
                                     <i class="fas fa-caret-down"></i>270.97
                                 </span>
                             </li>
                             <li>
-                                <img src="{{ asset('Liquid/images/in-liquid-ticker-4.svg') }}"
-                                     data-src="Liquid/images/in-liquid-ticker-4.svg" alt="ticker-image"
+                                <img src="{{ asset('liquid/images/in-liquid-ticker-4.svg') }}"
+                                     data-src="liquid/images/in-liquid-ticker-4.svg" alt="ticker-image"
                                      data-width data-height data-uk-img>
                                 <span class="uk-label uk-label-success uk-margin-left">
                                     <i class="fas fa-caret-up"></i>3,218.51
                                 </span>
                             </li>
                             <li>
-                                <img src="{{ asset('Liquid/images/in-liquid-ticker-5.svg') }}"
-                                     data-src="Liquid/images/in-liquid-ticker-5.svg" alt="ticker-image"
+                                <img src="{{ asset('liquid/images/in-liquid-ticker-5.svg') }}"
+                                     data-src="liquid/images/in-liquid-ticker-5.svg" alt="ticker-image"
                                      data-width data-height data-uk-img>
                                 <span class="uk-label uk-label-danger uk-margin-left">
                                     <i class="fas fa-caret-down"></i>735.11
@@ -140,8 +140,8 @@
                     <div>
                         <div class="uk-card uk-card-secondary uk-border-rounded uk-cover-container">
                             <div class="uk-card-media-top">
-                                <img src="{{ asset('Liquid/images/team.png') }}"
-                                     data-src="Liquid/images/team.png" alt="sample-image"
+                                <img src="{{ asset('liquid/images/team.png') }}"
+                                     data-src="liquid/images/team.png" alt="sample-image"
                                      data-width data-height data-uk-img>
                             </div>
                             <div class="uk-card-body">
@@ -156,8 +156,8 @@
                     <div>
                         <div class="uk-card uk-card-secondary uk-border-rounded uk-cover-container">
                             <div class="uk-card-media-top">
-                                <img src="{{ asset('Liquid/images/secure.png') }}" data-height data-uk-img
-                                     data-src="Liquid/images/secure.png" alt="sample-image" data-width >
+                                <img src="{{ asset('liquid/images/secure.png') }}" data-height data-uk-img
+                                     data-src="liquid/images/secure.png" alt="sample-image" data-width >
                             </div>
                             <div class="uk-card-body">
                                 <h3>SECURE INVESTMENTS</h3>
@@ -171,8 +171,8 @@
                     <div>
                         <div class="uk-card uk-card-secondary uk-border-rounded uk-cover-container">
                             <div class="uk-card-media-top">
-                                <img src="{{ asset('Liquid/images/support.png') }}" data-height data-uk-img
-                                     data-src="Liquid/images/support.png" alt="sample-image" data-width>
+                                <img src="{{ asset('liquid/images/support.png') }}" data-height data-uk-img
+                                     data-src="liquid/images/support.png" alt="sample-image" data-width>
                             </div>
                             <div class="uk-card-body">
                                 <h3>24/7 ONLINE SUPPORT</h3>
@@ -193,8 +193,8 @@
                 <div class="uk-grid-large uk-child-width-1-2@m" data-uk-grid>
                     <div class="uk-flex uk-flex-left">
                         <div class="uk-margin-right">
-                            <img src="{{ asset('Liquid/images/server.svg') }}" height="128" data-uk-img
-                                 data-src="Liquid/images/server.svg" alt="sample-icon" width="128">
+                            <img src="{{ asset('liquid/images/server.svg') }}" height="128" data-uk-img
+                                 data-src="liquid/images/server.svg" alt="sample-icon" width="128">
                         </div>
                         <div>
                             <h3>DEDICATED SERVER</h3>
@@ -206,8 +206,8 @@
                     </div>
                     <div class="uk-flex uk-flex-left">
                         <div class="uk-margin-right">
-                            <img src="{{ asset('Liquid/images/newspaper.svg') }}"
-                                 data-src="Liquid/images/newspaper.svg" alt="sample-icon"
+                            <img src="{{ asset('liquid/images/newspaper.svg') }}"
+                                 data-src="liquid/images/newspaper.svg" alt="sample-icon"
                                  width="128" height="128" data-uk-img>
                         </div>
                         <div>
@@ -219,8 +219,8 @@
                     </div>
                     <div class="uk-flex uk-flex-left">
                         <div class="uk-margin-right">
-                            <img src="{{ asset('Liquid/images/card.svg') }}"  height="128" data-uk-img
-                                 data-src="Liquid/images/card.svg" alt="sample-icon" width="128">
+                            <img src="{{ asset('liquid/images/card.svg') }}"  height="128" data-uk-img
+                                 data-src="liquid/images/card.svg" alt="sample-icon" width="128">
                         </div>
                         <div>
                             <h3>INSTANT PAYMENTS</h3>
@@ -232,8 +232,8 @@
                     </div>
                     <div class="uk-flex uk-flex-left">
                         <div class="uk-margin-right">
-                            <img src="{{ asset('Liquid/images/lock-closed.svg') }}"
-                                 data-src="Liquid/images/lock-closed.svg"
+                            <img src="{{ asset('liquid/images/lock-closed.svg') }}"
+                                 data-src="liquid/images/lock-closed.svg"
                                  alt="sample-icon" width="128" height="128" data-uk-img>
                         </div>
                         <div>
@@ -245,8 +245,8 @@
                     </div>
                     <div class="uk-flex uk-flex-left">
                         <div class="uk-margin-right">
-                            <img src="{{ asset('Liquid/images/analytics.svg') }}"
-                                 data-src="Liquid/images/analytics.svg"
+                            <img src="{{ asset('liquid/images/analytics.svg') }}"
+                                 data-src="liquid/images/analytics.svg"
                                  alt="sample-icon" width="128" height="128" data-uk-img>
                         </div>
                         <div>
@@ -259,8 +259,8 @@
                     </div>
                     <div class="uk-flex uk-flex-left">
                         <div class="uk-margin-right">
-                            <img src="{{ asset('Liquid/images/headset.svg') }}"
-                                 data-src="Liquid/images/headset.svg"
+                            <img src="{{ asset('liquid/images/headset.svg') }}"
+                                 data-src="liquid/images/headset.svg"
                                  alt="sample-icon" width="128" height="128" data-uk-img>
                         </div>
                         <div>
@@ -277,14 +277,14 @@
         <!-- section content end -->
         <!-- section content begin -->
         <div class="uk-section uk-section-muted uk-padding-large in-liquid-3 uk-background-contain uk-background-center-center"
-             style="background-image: url(Liquid/images/in-liquid-3-bg.png);" data-uk-img>
+             style="background-image: url(liquid/images/in-liquid-3-bg.png);" data-uk-img>
             <div class="uk-container">
                 <div class="uk-grid uk-flex uk-flex-center">
                     <div class="uk-width-5-6@m uk-inline">
                         <div class="uk-grid-large uk-flex uk-flex-middle uk-flex-right" data-uk-grid>
                             <div class="uk-position-top-left">
-                                <img src="{{ asset('Liquid/images/in-liquid-3-mockup.png') }}"
-                                     data-src="Liquid/images/in-liquid-3-mockup.png"
+                                <img src="{{ asset('liquid/images/in-liquid-3-mockup.png') }}"
+                                     data-src="liquid/images/in-liquid-3-mockup.png"
                                      alt="sample-images" width="650" height="469" data-uk-img>
                             </div>
                             <div class="uk-width-1-2@m">
@@ -395,7 +395,7 @@
         <!-- section content end -->
         <!-- section content begin -->
         <div class="uk-section uk-section-muted in-liquid-5 uk-background-contain uk-background-top-center in-offset-bottom-40"
-             style="background-image: url(Liquid/images/in-liquid-5-bg.png);">
+             style="background-image: url(liquid/images/in-liquid-5-bg.png);">
             <div class="uk-container">
                 <div class="uk-grid uk-flex uk-flex-center">
                     <div class="uk-width-5-6@m">
@@ -405,28 +405,28 @@
                         <div class="uk-grid-collapse uk-child-width-1-2@s uk-child-width-1-6@m uk-text-center
                          uk-margin-medium in-client-logo-6" data-uk-grid>
                             <div class="uk-tile">
-                                <img class="uk-margin-remove" src="{{ asset('Liquid/images/bitcoin.png') }}"
-                                     data-src="Liquid/images/bitcoin.png" alt="payment-image" width="167"
+                                <img class="uk-margin-remove" src="{{ asset('liquid/images/bitcoin.png') }}"
+                                     data-src="liquid/images/bitcoin.png" alt="payment-image" width="167"
                                      height="55" data-uk-img>
                             </div>
                             <div class="uk-tile">
                                 <img class="uk-margin-remove" src="img/in-lazy.gif"
-                                     data-src="Liquid/images/perfect.png" alt="{{ asset('Liquid/images/perfect.png') }}"
+                                     data-src="liquid/images/perfect.png" alt="{{ asset('liquid/images/perfect.png') }}"
                                      width="167" height="55" data-uk-img>
                             </div>
                             <div class="uk-tile">
-                                <img class="uk-margin-remove" src="{{ asset('Liquid/images/payeer.png') }}"
-                                     data-src="Liquid/images/payeer.png" alt="payment-image"
+                                <img class="uk-margin-remove" src="{{ asset('liquid/images/payeer.png') }}"
+                                     data-src="liquid/images/payeer.png" alt="payment-image"
                                      width="167" height="55" data-uk-img>
                             </div>
                             <div class="uk-tile">
-                                <img class="uk-margin-remove" src="{{ asset('Liquid/images/geo.png') }}"
-                                     data-src="Liquid/images/geo.png" alt="payment-image" width="167"
+                                <img class="uk-margin-remove" src="{{ asset('liquid/images/geo.png') }}"
+                                     data-src="liquid/images/geo.png" alt="payment-image" width="167"
                                      height="55" data-uk-img>
                             </div>
                             <div class="uk-tile">
-                                <img class="uk-margin-remove" src="{{ asset('Liquid/images/ddos.png') }}"
-                                     data-src="Liquid/images/ddos.png" alt="payment-image" width="167"
+                                <img class="uk-margin-remove" src="{{ asset('liquid/images/ddos.png') }}"
+                                     data-src="liquid/images/ddos.png" alt="payment-image" width="167"
                                      height="55" data-uk-img>
                             </div>
                         </div>

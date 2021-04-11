@@ -10,24 +10,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#f2f3f5" />
     <!-- Site Properties -->
-    <title>Homepage - Liquid HTML5 Template</title>
+    <title>Homepage - Bristol Mining</title>
     <!-- Critical preload -->
-    <link rel="preload" href="{{asset('Liquid/js/vendors/uikit.min.js')}}" as="script">
-    <link rel="preload" href="{{asset('Liquid/css/vendors/uikit.min.css')}}" as="style">
-    <link rel="preload" href="{{asset('Liquid/css/style.css" as="style')}}">
+    <link rel="preload" href="{{asset('liquid/js/vendors/uikit.min.js')}}" as="script">
+    <link rel="preload" href="{{asset('liquid/css/vendors/uikit.min.css')}}" as="style">
+    <link rel="preload" href="{{asset('liquid/css/style.css" as="style')}}">
     <!-- Icon preload -->
-    <link rel="preload" href="{{asset('Liquid/fonts/fa-brands-400.woff2')}}" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="{{asset('Liquid/fonts/fa-solid-900.woff2')}}" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="{{asset('liquid/fonts/fa-brands-400.woff2')}}" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="{{asset('liquid/fonts/fa-solid-900.woff2')}}" as="font" type="font/woff2" crossorigin>
     <!-- Font preload -->
-    <link rel="preload" href="{{asset('Liquid/fonts/inter-v2-latin-regular.woff2')}}" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="{{asset('Liquid/fonts/inter-v2-latin-500.woff2')}}" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="{{asset('Liquid/fonts/inter-v2-latin-700.woff2')}}" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="{{asset('liquid/fonts/inter-v2-latin-regular.woff2')}}" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="{{asset('liquid/fonts/inter-v2-latin-500.woff2')}}" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="{{asset('liquid/fonts/inter-v2-latin-700.woff2')}}" as="font" type="font/woff2" crossorigin>
     <!-- Favicon and apple icon -->
-    <link rel="shortcut icon" href="{{asset('Liquid/favicon.ico')}}" type="image/x-icon">
-    <link rel="apple-touch-icon-precomposed" href="{{asset('Liquid/apple-touch-icon.png')}}">
+    <link rel="shortcut icon" href="{{asset('liquid/favicon.ico')}}" type="image/x-icon">
+    <link rel="apple-touch-icon-precomposed" href="{{asset('liquid/apple-touch-icon.png')}}">
     <!-- CSS -->
-    <link rel="stylesheet" href="{{asset('Liquid/css/vendors/uikit.min.css')}}">
-    <link rel="stylesheet" href="{{asset('Liquid/css/style.css')}}">
+    <link rel="stylesheet" href="{{asset('liquid/css/vendors/uikit.min.css')}}">
+    <link rel="stylesheet" href="{{asset('liquid/css/style.css')}}">
 </head>
 <body>
     <!-- preloader begin -->
@@ -45,7 +45,7 @@
                     <div class="uk-navbar-left">
                         <div class="uk-navbar-item">
                             <!-- logo begin -->
-                            <a class="uk-logo" href="{{asset('Liquid/index.html')}}">
+                            <a class="uk-logo" href="{{asset('liquid/index.html')}}">
                                 <img src="img/in-lazy.gif" data-src="img/in-logo-1.svg" alt="logo"
                                      width="160" height="34" data-uk-img>
                             </a>
@@ -143,8 +143,8 @@
         <!-- totop end -->
     </footer>
     <!-- Javascript -->
-    <script src="{{asset('Liquid/js/vendors/uikit.min.js')}}"></script>
-    <script src="{{asset('Liquid/js/vendors/blockit.min.js')}}"></script>
-    <script src="{{asset('Liquid/js/config-theme.js')}}"></script>
+    <script src="{{asset('liquid/js/vendors/uikit.min.js')}}"></script>
+    <script src="{{asset('liquid/js/vendors/blockit.min.js')}}"></script>
+    <script src="{{asset('liquid/js/config-theme.js')}}"></script>
 </body>
 </html>
