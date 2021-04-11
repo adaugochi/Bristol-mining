@@ -21,14 +21,14 @@
   </head>
   <body>
     <div class="container-scroller">
-      <div class="container-fluid page-body-wrapper full-page-wrapper">
-        <div class="content-wrapper d-flex align-items-center auth auth-bg-1 theme-one">
+      <div class="container-fluid page-body-wrapper" style="background:#ccc">
+        <div class="content-wrapper d-flex align-items-center auth theme-one">
           <div class="row w-100">
             <div class="col-lg-4 mx-auto">
               <div class="auto-form-wrapper">
                 <center>
                   <a href="/">
-                  <img src="{{ asset('blendconsults.png') }}" style="width: 150px" alt="" srcset="">
+                  <img src="{{ asset('logo.png') }}" style="width: 150px" alt="" srcset="">
                   </a>
                 </center>
                 <form method="POST" action="{{ route('login') }}">
@@ -85,7 +85,7 @@
                 </form>
               </div>
               
-              <p class="footer-text text-center">copyright © {{ date('Y') }}. All rights reserved.</p>
+              <p class="footer-text text-black text-center">copyright © {{ date('Y') }}. All rights reserved.</p>
             </div>
           </div>
         </div>

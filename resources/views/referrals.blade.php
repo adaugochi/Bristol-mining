@@ -27,7 +27,7 @@
         <div class="col-md-12 ">
             <div class="card">
                 <div class="card-body">
-                    <div><pre style="background-color: #ccc">{{ env("DOMAIN_NAME") }}/register?ref={{Auth::user()->referral_code}}</pre></div>
+                    <div><pre style="background-color: #ccc">https://{{ env("DOMAIN_NAME") }}/register?ref={{Auth::user()->referral_code}}</pre></div>
                     <table class="table mt-1">
                         <thead>
                             <tr>

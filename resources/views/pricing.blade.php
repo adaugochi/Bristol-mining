@@ -1,89 +1,101 @@
 @extends('layouts.landing')
 @section('contents')
-<header class="page-title page-bg" style="background-image: url(assets1/images/about-page.png);">
-    <div class="container">
-       <div class="page-title-inner">
-          <div class="section-title">
-             <h1>Investment Pricing</h1>
-             <ul class="page-breadcrumbs">
-                <li><a href="index.html">Home</a></li>
-                <li>Pricing</li>
-             </ul>
-          </div>
-       </div>
+<div class="financity-page-title-wrap  financity-style-large financity-center-align">
+    <div class="financity-header-transparent-substitute"></div>
+    <div class="financity-page-title-overlay"></div>
+    <div class="financity-page-title-container financity-container">
+        <div class="financity-page-title-content financity-item-pdlr">
+            <h1 class="financity-page-title">Investment Plan</h1>
+        </div>
     </div>
- </header>
- <section class="home-pricing-section p-tb-100">
-    <div class="container">
-       <div class="section-title">
-          <h2>Our Trading Packs</h2>
-       </div>
-       <div class="home-pricing-content">
-          <div class="home-pricing-category">
-             <table>
-                <thead>
-                   <tr class="orange-gradient">
-                      <th class="t-align-left">Pricing list</th>
-                      <th>Gold</th>
-                      <th>Professional</th>
-                      <th>Promo</th>
-                   </tr>
-                </thead>
-                <tbody>
-                   <tr>
-                      <td class="pricing-name blue-gradient"><img src="assets1/images/check-white.png" alt="check">Minimum</td>
-                      <td><span class="">$100</span></td>
-                      <td><span class="">$5,000</span></td>
-                      <td><span class="">$10,000</span></td>
-                   </tr>
-                   <tr>
-                      <td class="pricing-name blue-gradient"><img src="assets1/images/check-white.png" alt="check">Maximum</td>
-                      <td><span class="">$5,000</span></td>
-                      <td><span class="">$10,000</span></td>
-                      <td><span class="">$200,000</span></td>
-                   </tr>
-                   <tr>
-                      <td class="pricing-name blue-gradient"><img src="assets1/images/check-white.png" alt="check">Interest Rate</td>
-                      <td>2%</span></td>
-                      <td>5%</span></td>
-                      <td>10%</span></td>
-                   </tr>
-                   <tr>
-                      <td class="pricing-name blue-gradient"><img src="assets1/images/check-white.png" alt="check">Investment Span</td>
-                      <td>30 Days</span></td>
-                      <td>180 Days (6 Months)</span></td>
-                      <td>360 Days (1 Year)</span></td>
-                   </tr>
-                </tbody>
-             </table>
-          </div>
-       </div>
-    </div>
- </section>
-  
- <section class="home-contact-section overflow-hidden blue-gradient pt-100 pb-80">
-    <div class="home-contact-bg-circle">
-       <div class="home-contact-circle-item">
-          <img src="assets1/images/lg-circle-1.png" alt="circle">
-       </div>
-       <div class="home-contact-circle-item">
-          <img src="assets1/images/lg-circle-1.png" alt="circle">
-       </div>
-    </div>
-    <div class="container">
-       <div class="home-contact-inner">
-          <h2>367K Stakeholders! Join Blendconsults now</h2>
-          <ul class="section-button">
-             <li>
-                <a href="{{ route('register') }}" class="btn1 orange-gradient btn-with-image">
-                <i class="flaticon-agenda"></i>
-                <i class="flaticon-agenda"></i>
-                Create Your Account
-                </a>
-             </li>
-          </ul>
-       </div>
-    </div>
- </section>
+</div>
+<div class="financity-page-wrapper" id="financity-page-wrapper">
+    <div class="gdlr-core-page-builder-body">
+        <div class="gdlr-core-pbf-wrapper " style="padding: 90px 0px 60px 0px;">
+            <div class="gdlr-core-pbf-wrapper-content gdlr-core-js ">
+                <div class="gdlr-core-pbf-wrapper-container clearfix gdlr-core-container">
+                    <div class="gdlr-core-pbf-element">
+                        <div class="gdlr-core-title-item gdlr-core-item-pdb clearfix  gdlr-core-left-align gdlr-core-title-item-caption-top gdlr-core-item-pdlr">
+                            <div class="gdlr-core-title-item-title-wrap ">
+                                <h3 class="gdlr-core-title-item-title gdlr-core-skin-title " style="font-size: 45px;font-weight: 600;letter-spacing: 0px;text-transform: none;"><span class="gdlr-core-title-item-title-divider gdlr-core-skin-divider"></span></h3></div>
+                        </div>
+                    </div>
+                    <div class="gdlr-core-pbf-element">
+                        <div class="gdlr-core-text-box-item gdlr-core-item-pdlr gdlr-core-item-pdb gdlr-core-left-align" style="padding-bottom: 50px;">
+                            <div class="gdlr-core-text-box-item-content" style="font-size: 16px;">
+                                <p>There is also a 10% bonus attached to first generation of your referrals and also receive a 4% bonus from your downliner first refferal and also your referral bonus can be withdrawn at any time before the 9 day expiration period of your investment.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="gdlr-core-pbf-element">
+                        <div class="gdlr-core-price-table-item gdlr-core-item-pdlr gdlr-core-item-pdb clearfix ">
+                            <div class="gdlr-core-price-table-column gdlr-core-column-20">
+                                <div class="gdlr-core-price-table ">
+                                    <div class="gdlr-core-price-table-head">
+                                        <div class="gdlr-core-price-table-icon"><i class="fa fa-lightbulb-o"></i></div>
+                                        <h3 class="gdlr-core-price-table-title">Bronze Plan</h3>
+                                    </div>
+                                    <div class="gdlr-core-price-table-content-wrap">
+                                        <div class="gdlr-core-price-table-content">
+                                            <div class="gdlr-core-price-list-shortcode">
+                                                <ul>
+                                                    <li><i class="fa fa-check"></i>Minimum: $200</li>
+                                                    <li><i class="fa fa-check"></i>Maximum: $4,999</li>
+                                                    <li><i class="fa fa-check"></i>4.7% Daily Return</li>
+                                                    <li><i class="fa fa-check"></i>23.5% Total Return</li>
+                                                    <li><i class="fa fa-check"></i>Period of 5 Days</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="gdlr-core-price-table-column gdlr-core-column-20">
+                                <div class="gdlr-core-price-table gdlr-core-active">
+                                    <div class="gdlr-core-price-table-head">
+                                        <div class="gdlr-core-price-table-icon"><i class="fa fa-codepen"></i></div>
+                                        <h3 class="gdlr-core-price-table-title">Gold Plan</h3>
+                                    </div>
+                                    <div class="gdlr-core-price-table-content-wrap">
+                                        <div class="gdlr-core-price-table-content">
+                                            <div class="gdlr-core-price-list-shortcode">
+                                                <ul>
+                                                    <li><i class="fa fa-check"></i>Minimum: $5,000</li>
+                                                    <li><i class="fa fa-check"></i>Maximum: $9,999</li>
+                                                    <li><i class="fa fa-check"></i>6.6% Daily Return</li>
+                                                    <li><i class="fa fa-check"></i>46.2% Total Return</li>
+                                                    <li><i class="fa fa-check"></i>Period of 7 Days</li>
+                                                </ul>
+                                            </div>
+                                        </div></div>
+                                </div>
+                            </div>
+                            <div class="gdlr-core-price-table-column gdlr-core-column-20">
+                                <div class="gdlr-core-price-table ">
+                                    <div class="gdlr-core-price-table-head">
+                                        <div class="gdlr-core-price-table-icon"><i class="fa fa-connectdevelop"></i></div>
+                                        <h3 class="gdlr-core-price-table-title">Ultimate Plan</h3>
+                                    </div>
+                                    <div class="gdlr-core-price-table-content-wrap">
+                                        <div class="gdlr-core-price-table-content">
+                                            <div class="gdlr-core-price-list-shortcode">
+                                                <ul>
+                                                    <li><i class="fa fa-check"></i>Minimum: $10,000</li>
+                                                    <li><i class="fa fa-check"></i>Maximum: $500,000</li>
+                                                    <li><i class="fa fa-check"></i>8.6% Daily Return</li>
+                                                    <li><i class="fa fa-check"></i>77.9% Total Return</li>
+                                                    <li><i class="fa fa-check"></i>Period of 9 Days</li>
+                                                </ul>
+                                            </div>
+                                        </div></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
+    </div>
+</div>
 @endsection

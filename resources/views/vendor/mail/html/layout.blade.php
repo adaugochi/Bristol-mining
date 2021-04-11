@@ -24,10 +24,11 @@ width: 100% !important;
 </style>
 
 <table class="wrapper" width="100%" cellpadding="0" cellspacing="0" role="presentation">
-<tr>
+<tr style='background:black'>
 <td align="center">
 <table class="content" width="100%" cellpadding="0" cellspacing="0" role="presentation">
-{{ $header ?? '' }}
+{{-- {{ $header ?? '' }} --}}
+<center><img src="{{asset('logo.png')}}" style="width:150px"></center>
 
 <!-- Email Body -->
 <tr>

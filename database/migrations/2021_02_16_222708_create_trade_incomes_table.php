@@ -24,7 +24,7 @@ class CreateTradeIncomesTable extends Migration
             $table->foreign('deposit_id')
                 ->references('id')->on('deposits');
             $table->foreign('user_id')
-                ->references('id')->on('deposits');
+                ->references('id')->on('users');
         });
     }
 

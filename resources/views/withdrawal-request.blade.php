@@ -14,10 +14,10 @@
     <!-- Page Title Header Ends-->
 
     <div class="row">
-      @if(Session::has('danger'))
+      @if(Session::has('error'))
         <div class="col-md-12">
           <div class="alert alert-danger">
-            {{ Session::get('danger')}}
+            {{ Session::get('error')}}
           </div>
         </div>
       @endif
@@ -39,7 +39,7 @@
                                 <select name="deposit_id" id="token-base-amount" class="form-control">
                                     <option></option>
                                     @foreach ($deposits as $p)
-                                        <option value="{{$p->id}}">{{$p->amount}} BTC - Due Amount: {{$p->due_amount}} BTC</option>
+                                        <option value="{{$p->id}}">${{$p->amount}} - Withdrawable Amount: ${{$p->due_amount}}</option>
                                     @endforeach 
                                 </select>
                                 </div>
@@ -78,7 +78,7 @@
                             <td>{{$key+1}}</td>
                             <td class="data-col dt-token"><span class="lead token-amount">{{$w->status}}</span>
                             </td>
-                            <td class="data-col dt-amount"><span class="lead amount-pay">{{$w->amount}} BTC</span>
+                            <td class="data-col dt-amount"><span class="lead amount-pay">${{$w->amount}}</span>
                             </td>
                             <td class="data-col dt-account"><span class="lead user-info">{{$w->created_at->format('d M, Y H:i a') }}<br>
                           </tr>

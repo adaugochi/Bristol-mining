@@ -32,7 +32,7 @@
                     <th class="data-col dt-id">S/N</th>
                   <th class="data-col dt-tnxno">Name</th>
                     <th class="data-col dt-amount">Email</th>
-                    <th class="data-col dt-usd-amount">BTC Address</th>
+                    <th class="data-col dt-usd-amount">Wallet Address</th>
                     <th class="data-col dt-account">Date Joined</th>
                     <th class="data-col">Role</th>
                     <th class="data-col">Delete</th>
@@ -43,7 +43,7 @@
               @foreach($users as $key => $d)
               <tr class="data-item">
                    <td>{{$key+1}}</td>
-                    <td class="data-col dt-token"><span class="lead token-amount">{{$d->name}}</span>
+                    <td class="data-col dt-token"><span class="lead token-amount"><a href="{{ route('admin-get-user-referral', ['user_id' => $d->id]) }}">{{$d->name}}</a></span>
                     </td>
                     <td class="data-col dt-amount"><span class="lead amount-pay">{{$d->email}} BTC</span>
                     </td>
@@ -63,6 +63,7 @@
           </tbody>
           
         </table>
+        {{$users->links()}}
        </div>
     </div>
 </div>

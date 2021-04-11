@@ -22,23 +22,24 @@
     <link rel="stylesheet" href="{{ asset('assets/css/demo_1/style.css')}}">
     <!-- End Layout styles -->
     <link rel="shortcut icon" href="{{ asset('assets/images/favicon.ico')}}" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
   </head>
   <body>
     <div class="container-scroller">
         <!-- partial:partials/_navbar.html -->
         <nav class="navbar default-layout col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
-          <div class="text-center navbar-brand-wrapper d-flex align-items-top justify-content-center">
+          <div class="text-center navbar-brand-wrapper d-flex align-items-top justify-content-center" style="background-color: #101112">
             <a class="navbar-brand brand-logo" href="{{ route('home') }}">
-              <img src="{{asset('blendconsults.png')}}" style="width: 90px;" alt="logo" /> 
+              <img src="{{asset('logo.png')}}" style="width: 90px;" alt="logo" />
               {{-- {{env('DOMAIN_NAME')}} --}}
             </a>
             <a class="navbar-brand brand-logo-mini" href="{{ route('home') }}">
-              <img src="{{asset('blendconsults.png')}}" style="width: 50px;" alt="logo" /> 
+              <img src="{{asset('logo.png')}}" style="width: 50px;" alt="logo" />
             </a>
           </div>
           <div class="navbar-menu-wrapper d-flex align-items-center">
             <ul class="navbar-nav">
-              <li class="nav-item font-weight-semibold d-none d-lg-block">Help : +050 2992 709</li>
+              <li class="nav-item font-weight-semibold d-none d-lg-block">Help: support@motasko.com</li>
             </ul>
             {{--
             <form class="ml-auto search-form d-none d-md-block" action="#">
@@ -47,12 +48,12 @@
               </div>
             </form>
             --}}
-            <ul class="navbar-nav ml-auto">
-               
+            <ul class="navbar-nav ml-auto" >
+
               <li class="nav-item dropdown d-none d-xl-inline-block user-dropdown">
                 <a class="nav-link dropdown-toggle" id="UserDropdown" href="#" data-toggle="dropdown" aria-expanded="false">
-                  
-                  <img class="img-xs rounded-circle" src="{{ asset('assets/images/faces/face8.jpg')}}" alt="Profile image"> 
+
+                  <img class="img-xs rounded-circle" src="{{ asset('assets/images/faces/face8.jpg')}}" alt="Profile image">
                 </a>
                 <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="UserDropdown">
                   <div class="dropdown-header text-center">
@@ -73,8 +74,8 @@
         <!-- partial -->
         <div class="container-fluid page-body-wrapper">
           <!-- partial:partials/_sidebar.html -->
-          <nav class="sidebar sidebar-offcanvas" id="sidebar">
-            <ul class="nav">
+          <nav class="sidebar sidebar-offcanvas" id="sidebar" >
+            <ul class="nav" style="background-color: #101112">
               <li class="nav-item nav-profile">
                 <a href="#" class="nav-link">
                   <div class="profile-image">
@@ -86,7 +87,7 @@
                   </div>
                 </a>
               </li>
-              <li class="nav-item nav-category">Main Menu</li>
+              {{-- <li class="nav-item nav-category">Main Menu</li> --}}
               <li class="nav-item">
                 <a class="nav-link" href="{{ route('home') }}">
                   <i class="menu-icon typcn typcn-document-text"></i>
@@ -137,8 +138,8 @@
                   <span class="menu-title">Referrals</span>
                 </a>
               </li>
-              
-              @else 
+
+              @else
               <li class="nav-item">
                 <a class="nav-link" href="{{ route('admin-deposits') }}">
                   {{-- <i class="menu-icon typcn typcn-bell"></i> --}}
@@ -172,19 +173,19 @@
                   <span class="menu-title">Sign Out</span>
                 </a>
               </li>
-             
+
             </ul>
           </nav>
           <!-- partial -->
           <div class="main-panel">
             @yield('contents')
             <!-- content-wrapper ends -->
-        <!-- partial:partials/_footer.html -->
-        <footer class="footer">
-            <div class="container-fluid clearfix">
-              <span class="text-muted d-block text-center text-sm-left d-sm-inline-block">Copyright © {{env('DOMAIN_NAME')}} 2020</span>
-            </div>
-          </footer>
+            <!-- partial:partials/_footer.html -->
+            <footer class="footer">
+              <div class="container-fluid clearfix">
+                <span class="text-muted d-block text-center text-sm-left d-sm-inline-block">Copyright © {{env('DOMAIN_NAME')}} {{date('Y')}}</span>
+              </div>
+            </footer>
           <!-- partial -->
         </div>
         <!-- main-panel ends -->
@@ -192,19 +193,20 @@
       <!-- page-body-wrapper ends -->
   </div>
     <!-- container-scroller -->
-    <!-- plugins:js -->
-    <script type="text/javascript">
-      var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-      (function(){
-      var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-      s1.async=true;
-      s1.src='https://embed.tawk.to/603fc36c385de407571c2d38/default';
-      s1.charset='UTF-8';
-      s1.setAttribute('crossorigin','*');
-      s0.parentNode.insertBefore(s1,s0);
-      })();
-      </script>
-      <!--End of Tawk.to Script-->
+    <!--Start of Tawk.to Script-->
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/6051fa06f7ce182709310a54/1f103hbgb';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
+<!--End of Tawk.to Script-->
+
     <script src="{{ asset('assets/vendors/js/vendor.bundle.base.js')}}"></script>
     <script src="{{ asset('assets/vendors/js/vendor.bundle.addons.js')}}"></script>
     <!-- endinject -->

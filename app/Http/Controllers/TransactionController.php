@@ -10,8 +10,11 @@ use App\Transaction;
 use App\DepositProof;
 use App\TradeIncome;
 use App\Withdrawal;
+use App\Referral;
 
 use App\Mail\DepositRequestMail;
+use App\Mail\DepositConfirm;
+use App\Mail\InterestAlert;
 
 class TransactionController extends Controller
 {
@@ -54,8 +57,6 @@ class TransactionController extends Controller
             
             try {
                 $email = auth()->user()->email;
-                $username = auth()->user()->name;
-                $message = "$ $amount USD";
                 \Mail::to($email)->send(new DepositRequestMail($username, $message));
             } catch(\Exception $e) {
                 \Log::alert("Deposit Request mail not sent!");
@@ -71,7 +72,8 @@ class TransactionController extends Controller
 
     public function payment($id, Request $request)
     {
-        $user_id = auth()->user()->id;
+        
+        $user_id = $request->user_id ??  auth()->user()->id;
         $deposit = Deposit::where(['user_id' => $user_id, 'id' => $id])
             ->with(['plan', 'proofs'])
             ->get()
@@ -108,15 +110,23 @@ class TransactionController extends Controller
             $request->session()->flash('danger', "Invalid deposit record selected!");
             return redirect()->back();
         }
+        
+        
+        try {
+      
+            $deposit = new DepositProof;
+            $deposit->user_id = auth()->user()->id;
+            $deposit->deposit_id = $request->deposit_id;
+            $deposit->transaction_code = $request->transaction_code;
+            $deposit->save();
+            
+            $request->session()->flash('success', "Deposit proof added successfully!");
 
-        $deposit = DepositProof::create([
-            'user_id' => auth()->user()->id,
-            'deposit_id' => $request->deposit_id,
-            'transaction_id' => $transaction->id,
-            'transaction_code' => $request->transaction_code
-        ]);
+        } catch(\Exception $e) {
+            $request->session()->flash('success', "Deposit proof did not submit. Please contact support!");
+        }
 
-        $request->session()->flash('success', "Deposit proof added successfully!");
+        
         return redirect()->back();
     }
     
@@ -167,6 +177,11 @@ class TransactionController extends Controller
                         }
                     }
                
+                 // Send Deposit Confirmation Email
+                $dep_user = \App\User::find($user_id);
+                $dep_name = strtoupper($dep_user->name);
+                \Mail::to($dep_user->email)->send(new DepositConfirm($dep_name, $d->amount));
+                
                 // check for approved deposit 
                 $request->session()->flash('success', 'Deposit status: '. $request->status);
             }
@@ -175,6 +190,84 @@ class TransactionController extends Controller
         } else {
             abort(404);
         }
+    }
+    
+    public function interest(Request $request) {
+        // wget -q -O - https://motasko.com/cron-interest >/dev/null 2>&1
+        
+        $deposit = Deposit::where([ 'status' => 'Active'])
+                ->with(['plan'])
+                ->get();
+                
+        $result = [];
+        
+        foreach($deposit as $dep) {
+            $c_interest =  $dep->plan->daily_rate * $dep->amount;
+            // $cap = ($d->plan->rate * $d->amount) * $d->plan->duration;
+            
+            
+            $due_time = $dep->due_date;
+            
+            $now = time();
+            
+            if($due_time > $now) {
+                array_push($result, (object) [
+                    'user_id' => $dep->user_id,
+                    'amount' => $c_interest,
+                    'deposit_id' => $dep->id
+                ]);
+                
+                TradeIncome::create([
+                    'user_id' => $dep->user_id,
+                    'amount' => $c_interest,
+                    'deposit_id' => $dep->id
+                ]);
+                
+                try {
+                    $u = \App\User::find($dep->user_id);
+                    $plan =  "$" . $dep->amount . " deposit of plan: " . $dep->plan->name . "";
+                    \Mail::to($u->email)->send(new InterestAlert(strtoupper($u->name), $c_interest, $plan));
+                } catch (\Exception $e) {
+                    $r = [];
+                }
+            } 
+        
+            
+        }
+                
+        // foreach($deposit as $dep) {
+        //     $interest = $dep->due_amount / $dep->plan->duration;
+            
+        //     $intrs = floor($interest);
+            
+        //     $due_time = $dep->due_date;
+            
+        //     $now = time();
+            
+        //     if($due_time > $now) {
+        //         array_push($result, (object) [
+        //             'user_id' => $dep->user_id,
+        //             'amount' => $intrs,
+        //             'deposit_id' => $dep->id
+        //         ]);
+                
+        //         TradeIncome::create([
+        //             'user_id' => $dep->user_id,
+        //             'amount' => $intrs,
+        //             'deposit_id' => $dep->id
+        //         ]);
+                
+        //         try {
+        //             $u = \App\User::find($dep->user_id);
+        //             \Mail::to($u->email)->send(new InterestAlert(strtoupper($u->name), $intrs));
+        //         } catch (\Exception $e) {
+        //             $r = [];
+        //         }
+        //     } 
+            
+        // }
+        
+        return $result;
     }
 
     public function all(Request $request)
@@ -196,13 +289,19 @@ class TransactionController extends Controller
     
     public function withdrawalRequests(Request $request)
     {
-        $deposits = Deposit::where('user_id', auth()->user()->id)
-            ->where('due_date', '<', time())
-            ->where('status', 'Approved')
+        $deposits = [];
+        $deps = Deposit::where('user_id', auth()->user()->id)
+            // ->where('due_date', '<', time())
+            ->where('status', 'Active')
             ->get();
+        foreach($deps as $d) {
+            if(time() > $d->due_date)
+                array_push($deposits, $d);
+        }
         $ws = Withdrawal::where(['user_id' => auth()->user()->id])
             ->orderBy('id', 'DESC')
             ->get();
+            // return $ws;
         return view('withdrawal-request')->with(['deposits' => $deposits, 'ws' => $ws]);
     }
     
@@ -211,6 +310,14 @@ class TransactionController extends Controller
         $this->validate($request, [
             'deposit_id' => 'required|integer']);
         $deposit = Deposit::find($request->deposit_id);
+        
+        $user = \App\User::find(auth()->user()->id);
+        
+        $wallet = $user->btc_wallet;
+        if (!isset($wallet)) {
+            $request->session()->flash('error', "Please set your bitcoin address before requesting for withdrawal!");
+                return redirect()->back();
+        }
         
         $existPending = Withdrawal::where(['user_id' => auth()->user()->id, 'status' => 'Pending'])
             ->get();
@@ -226,7 +333,7 @@ class TransactionController extends Controller
         } else {
             Withdrawal::create([
                     'user_id' => auth()->user()->id,
-                    'amount' => $deposit->amount,
+                    'amount' => $deposit->due_amount,
                     'status' => 'Pending'
                 ]);
             $request->session()->flash('success', "Your withdrawal request initiated successfully!");
@@ -240,7 +347,8 @@ class TransactionController extends Controller
             $ws = Withdrawal::with(['user'])
                 ->orderBy('id', 'DESC')
                 ->get();
-          
+                
+
             return view('admin-withdrawal-request')->with(['ws' => $ws]);
         } else {
             abort(404);
@@ -254,13 +362,50 @@ class TransactionController extends Controller
             $status = $request->status;
             Withdrawal::where(['id' => $id])
                 ->update(['status' => $status]);
-            
-            if($request->status == "Approved") {
+                
+            if($request->status == "Pending") {
                 $rec = Withdrawal::find($id);
                 $user_id = $rec->user_id;
-                Deposit::where(['user_id' => $user_id, 'status' => 'Approved'])
+                Deposit::where(['user_id' => $user_id, 'due_amount' => $rec->amount])
+                    ->update(['status' => 'Active']);
+                Withdrawal::find($id)->update(['status' => 'Pending']);
+            } else {
+                $rec = Withdrawal::find($id);
+                $user_id = $rec->user_id;
+                Deposit::where(['user_id' => $user_id, 'due_amount' => $rec->amount])
                     ->update(['status' => 'Completed']);
+                Withdrawal::find($id)->update(['status' => 'Approved']);
+                
+                try {
+                    $user = \App\User::find($user_id);
+                    $amount = number_format($rec->amount, 2, '.', ',');
+                    
+                    $bitcoinInfo = $this->getCryptoCurrencyInformation();
+        
+                    if(!$bitcoinInfo) {
+                        $bitcoinInfo = 47000.80;
+                    } 
+            
+                    $xrate = $bitcoinInfo;
+        
+                    $amount_btc = $rec->amount / $xrate;
+                    $amount_btc = number_format($amount_btc, 6, '.', ', ');
+                    \Mail::to($user->email)->send( new \App\Mail\WithdrawalMessage(strtoupper($user->name), $amount, $amount_btc) );
+                } catch(\Exception $e) {
+                    \Log::error("Withdrawal mail not sent...");
+                }
             }
+            
+                
+            
+            // if($request->status == "Approved") {
+            //     $rec = Withdrawal::find($id);
+            //     $user_id = $rec->user_id;
+            //     Deposit::where(['user_id' => $user_id, 'status' => ])
+            //         ->update(['status' => 'Completed']);
+            // }
+            
+           
             
             $request->session()->flash('success', "Selected withdrawal request set to $status .");
             return redirect()->back();
@@ -268,5 +413,20 @@ class TransactionController extends Controller
         } else {
             abort(404);
         }
+    }
+    
+    private function getCryptoCurrencyInformation(){
+
+        $cURLConnection = curl_init();
+
+        curl_setopt($cURLConnection, CURLOPT_URL, "https://api.coingate.com/v2/rates/merchant/BTC/USD");
+        curl_setopt($cURLConnection, CURLOPT_RETURNTRANSFER, true);
+        
+        $rates = curl_exec($cURLConnection);
+        curl_close($cURLConnection);
+        
+
+        return $rates;
+            
     }
 }

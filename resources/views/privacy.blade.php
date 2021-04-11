@@ -1,28 +1,51 @@
 @extends('layouts.landing')
 @section('contents')
-<header class="page-title page-bg" style="background-image: url(assets1/images/about-page.png);">
-    <div class="container">
-       <div class="page-title-inner">
-          <div class="section-title">
-             <h1>Privacy Policy</h1>
-             <ul class="page-breadcrumbs">
-                <li><a href="/">Home</a></li>
-                <li>Privacy Policy</li>
-             </ul>
-          </div>
-       </div>
-    </div>
- </header>
- <section class="video-section pt-100 pb-70">
-    <div class="container">
-       <div class="home-facility-content">
-          <div class="row align-items-center">
-              
-             <div class="col-sm-12 col-md-12 col-lg-12 order-lg-1">
-                <div class="about-page-item pb-30">
-                   <div class="home-service-start">
-                      <h2>Privacy Policy</h2>
-                      <div class="row">
+<div class="financity-page-wrapper" id="financity-page-wrapper">
+    <div class="gdlr-core-page-builder-body">
+        <div class="gdlr-core-pbf-wrapper " style="padding: 420px 0px 135px 0px;" id="gdlr-core-wrapper-1">
+            <div class="gdlr-core-pbf-background-wrap">
+                <div class="gdlr-core-pbf-background gdlr-core-parallax gdlr-core-js" style="background-image: url(upload/page-title-background.jpg);background-size: cover;background-position: center;" data-parallax-speed="0.2"></div>
+            </div>
+            <div class="gdlr-core-pbf-wrapper-content gdlr-core-js ">
+                <div class="gdlr-core-pbf-wrapper-container clearfix gdlr-core-container">
+                    <div class="gdlr-core-pbf-element">
+                        <div class="gdlr-core-title-item gdlr-core-item-pdb clearfix  gdlr-core-center-align gdlr-core-title-item-caption-bottom gdlr-core-item-pdlr">
+                            <div class="gdlr-core-title-item-title-wrap ">
+                                <h3 class="gdlr-core-title-item-title gdlr-core-skin-title " style="font-size: 93px;font-weight: 600;letter-spacing: 0px;text-transform: none;color: #ffffff;">Privacy Policy<span class="gdlr-core-title-item-title-divider gdlr-core-skin-divider"></span></h3></div><span class="gdlr-core-title-item-caption gdlr-core-info-font gdlr-core-skin-caption" style="font-size: 14px;font-style: normal;letter-spacing: 2px;text-transform: uppercase;color: #e0e0e0;"></span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="gdlr-core-pbf-wrapper " style="padding: 100px 0px 170px 0px;" data-skin="Grey Text" id="gdlr-core-wrapper-2">
+            <div class="gdlr-core-pbf-background-wrap" style="background-color: #f6f6f6 ;"></div>
+            <div class="gdlr-core-pbf-wrapper-content gdlr-core-js ">
+                <div class="gdlr-core-pbf-wrapper-container clearfix gdlr-core-container">
+                    <div class="gdlr-core-pbf-column gdlr-core-column-15 gdlr-core-column-first">
+                        <div class="gdlr-core-pbf-column-content-margin gdlr-core-js ">
+                            <div class="gdlr-core-pbf-column-content clearfix gdlr-core-js ">
+                                <div class="gdlr-core-pbf-element">
+                                    <div class="gdlr-core-title-item gdlr-core-item-pdb clearfix  gdlr-core-left-align gdlr-core-title-item-caption-top gdlr-core-item-pdlr">
+                                        <div class="gdlr-core-title-item-title-wrap ">
+                                            <h3 class="gdlr-core-title-item-title gdlr-core-skin-title " style="font-size: 33px;font-weight: 400;letter-spacing: 0px;text-transform: none;">Privacy Policy (Undertaken)  <br><span class="gdlr-core-title-item-title-divider gdlr-core-skin-divider"></span></h3></div>
+                                    </div>
+                                </div>
+                                <div class="gdlr-core-pbf-element">
+                                    <div class="gdlr-core-divider-item gdlr-core-item-pdlr gdlr-core-item-pdb gdlr-core-divider-item-normal">
+                                        <div class="gdlr-core-divider-container gdlr-core-left-align" style="max-width: 109px;">
+                                            <div class="gdlr-core-divider-line gdlr-core-skin-divider" style="border-color: #313787;border-bottom-width: 3px;"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="gdlr-core-pbf-column gdlr-core-column-45">
+                        <div class="gdlr-core-pbf-column-content-margin gdlr-core-js ">
+                            <div class="gdlr-core-pbf-column-content clearfix gdlr-core-js ">
+                                <div class="gdlr-core-pbf-element">
+                                    <div class="gdlr-core-text-box-item gdlr-core-item-pdlr gdlr-core-item-pdb gdlr-core-left-align">
+                                        <div class="gdlr-core-text-box-item-content" style="font-size: 19px;">
+                                           <div class="row">
                         <div class="col-lg-12">
                         <p>Please read the following carefully to understand our views and practices regarding your personal data and how we will treat it.</p>
                         <p>By visiting the Website you are accepting and consenting to the practices described in this policy.</p>
@@ -138,7 +161,7 @@
                           <li class="mb-2"> <i class="fa fa-angle-right pr-2 mb-2"></i>to comply with subpoenas and other legal processes;</li>
                           <li class="mb-2"> <i class="fa fa-angle-right pr-2 mb-2"></i> to pursue available remedies or limit damages we may sustain;</li>
                           <li class="mb-2"> <i class="fa fa-angle-right pr-2 mb-2"></i>to protect our operations or those of any of our affiliates;</li>
-                          <li class="mb-2"> <i class="fa fa-angle-right pr-2 mb-2"></i> to protect the rights, privacy, safety or property of Blend Consults, our affiliates, you and others; and</li>
+                          <li class="mb-2"> <i class="fa fa-angle-right pr-2 mb-2"></i> to protect the rights, privacy, safety or property of Mostako, our affiliates, you and others; and</li>
                           <li class="mb-2"> <i class="fa fa-angle-right pr-2 mb-2"></i>to enforce our Terms of Use.</li>
                         </ul>
               
@@ -146,37 +169,15 @@
               
               
                       </div>
-                   </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-             </div>
-          </div>
-       </div>
+            </div>
+        </div>
     </div>
- </section>
-  
- <section class="home-contact-section overflow-hidden blue-gradient pt-100 pb-80">
-    <div class="home-contact-bg-circle">
-       <div class="home-contact-circle-item">
-          <img src="assets1/images/lg-circle-1.png" alt="circle">
-       </div>
-       <div class="home-contact-circle-item">
-          <img src="assets1/images/lg-circle-1.png" alt="circle">
-       </div>
-    </div>
-    <div class="container">
-       <div class="home-contact-inner">
-          <h2>367K Stakeholders! Join Blendconsults now</h2>
-          <ul class="section-button">
-             <li>
-                <a href="{{ route('register') }}" class="btn1 orange-gradient btn-with-image">
-                <i class="flaticon-agenda"></i>
-                <i class="flaticon-agenda"></i>
-                Create Your Account
-                </a>
-             </li>
-          </ul>
-       </div>
-    </div>
- </section>
-
+</div>
 @endsection

@@ -9,6 +9,7 @@ use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Http\Request;
+use App\Mail\WelcomeMail;
 
 class RegisterController extends Controller
 {
@@ -82,13 +83,20 @@ class RegisterController extends Controller
             if(!is_null($rusr))
                 \App\Referral::create(['user_id' => $u->id, 'has_injected' => 0, 'referral_id' => $rusr->id]);    
         }
+        
+        try {
+            $name = $u->name;
+            \Mail::to($u->email)->send(new WelcomeMail($name));
+        } catch(\Exception $e) {
+            \Log::alert("Deposit Request mail not sent!");
+        }
 
         return $u;
     }
 
     public function showRegistrationForm(Request $request)
     {
-        $ref = $request->ref ?? 1106684;
+        $ref = $request->ref ?? 5676108;
         return view('auth.register')->with(['ref' => $ref]);
     }
 }

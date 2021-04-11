@@ -22,13 +22,13 @@
   <body>
     <div class="container-scroller">
       <div class="container-fluid page-body-wrapper full-page-wrapper">
-        <div class="content-wrapper d-flex align-items-center auth auth-bg-1 theme-one">
+        <div class="content-wrapper d-flex align-items-center auth  theme-one" style="background:#ccc">
           <div class="row w-100" style="margin-top: 50px;">
             <div class="col-lg-4 mx-auto">
               <div class="auto-form-wrapper">
                 <center>
                   <a href="/">
-                  <img src="{{ asset('blendconsults.png') }}" style="width: 150px" alt="" srcset="">
+                  <img src="{{ asset('logo.png') }}" style="width: 150px" alt="" srcset="">
                   </a>
                 </center>
                 <form method="POST" action="{{ route('register') }}">

@@ -49,7 +49,7 @@
                         <!-- .row -->
                         <div class="row mt-2">
                             <div class="col-md-12">
-                                <div class="input-item input-with-label"><label for="full-name" class="input-item-label">BTC Wallet Address</label>
+                                <div class="input-item input-with-label"><label for="full-name" class="input-item-label">Wallet Address</label>
                                 <input class="form-control" value="{{$user->btc_wallet}}" type="text" id="full-name" name="btc_wallet" required>
                                 </div>
                                 <!-- .input-item -->

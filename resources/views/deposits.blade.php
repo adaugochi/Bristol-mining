@@ -35,7 +35,7 @@
                             <div class="input-group-prepend">
                               <span class="input-group-text"><b>BTC</b></span>
                             </div>
-                            <input type="text" class="form-control" value="1FZATFNBvBJEhHtvv2xLBbPnWXCx8rcUYR" aria-describedby="basic-addon1">
+                            <input type="text" class="form-control" value="1D3TU5n7DJc51yQyScRoAbCNPBw46wRhkz" aria-describedby="basic-addon1">
                           </div>
                         </div>
                         <div class="form-group">
@@ -43,17 +43,10 @@
                               <div class="input-group-prepend">
                                 <span class="input-group-text"><b>ETH</b></span>
                               </div>
-                              <input type="text" class="form-control" value="0xe9137297217110a3abc9caac80a66ce55cf42f10" aria-describedby="basic-addon1">
+                              <input type="text" class="form-control" value="0xF0473fdb5d38D076f3763B08c43aE29dB417913e" aria-describedby="basic-addon1">
                             </div>
                         </div>
-                        <div class="form-group">
-                            <div class="input-group">
-                              <div class="input-group-prepend">
-                                <span class="input-group-text"><b>LTC</b></span>
-                              </div>
-                              <input type="text" class="form-control" value="LSJP4s88Xv2GaTeJNLE1ccLxLf7fkAa9E7" aria-describedby="basic-addon1">
-                            </div>
-                        </div>  
+                          
                       </div>
                     </div>
                 </div>
@@ -81,7 +74,7 @@
                                 <label for="">Plan:</label>
                                 <select name="plan_id" class="form-control">
                                   @foreach (\App\Packages::all() as $p)
-                                      <option value="{{$p->id}}">{{$p->name}} - {{$p->duration}} days - {{$p->start}} - {{$p->end}} BTC</option>
+                                      <option value="{{$p->id}}">{{$p->name}} - {{$p->duration}} days - ${{$p->start}} - ${{$p->end}}</option>
                                   @endforeach 
                               </select>
                               </div>
@@ -111,7 +104,6 @@
                                 <select name="method" class="form-control">
                                   <option value="Bitcoin">Bitcoin (BTC)</option>
                                   <option value="Ethereum">Ethereum (ETH)</option>
-                                  <option value="Litecoin">Litecoin (LTC)</option>
                               </select>
                               </div>
                             </div>

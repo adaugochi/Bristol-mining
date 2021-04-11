@@ -33,7 +33,7 @@
     <div class="col-lg-12">
       <div class="card-head d-flex justify-content-between align-items-center">
         <h4 class="card-title mb-0">Deposit Details</h4>
-        <a href="{{route('deposits')}}" class="btn btn-sm btn-auto btn-primary d-sm-block d-none pull-right"><em class="fas fa-arrow-left mr-3"></em>Back</a><a href="{{route('deposits')}}" class="btn btn-icon btn-sm btn-primary d-sm-none"><em class="fas fa-arrow-left"></em></a></div>
+        {{-- <a href="{{route('deposits')}}" class="btn btn-sm btn-auto btn-primary d-sm-block d-none pull-right"><em class="fas fa-arrow-left mr-3"></em>Back</a><a href="{{route('deposits')}}" class="btn btn-icon btn-sm btn-primary d-sm-none"><em class="fas fa-arrow-left"></em></a> --}}</div>
       <div class="gaps-1-5x"></div>
     </div>
 </div>
@@ -73,8 +73,15 @@
         </tr>
         <tr>
           <td>Payment Method</td>
-          <td><strong>{{ $deposit->method }}</td>
+          <td><strong>{{ $deposit->method }}</strong></td>
         </tr>
+        @if($deposit->status == "Active")
+             <tr>
+          <td>View Income</td>
+          <td><a href="{{ route('income') }}" class="btn btn-success">View Income <i class="fa fa-eye"></i></a></td>
+        </tr>
+        @endif
+        
         <tr>
           <td colspan="2">
             @if (sizeof($deposit->proofs) > 0)

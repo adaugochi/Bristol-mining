@@ -379,7 +379,8 @@
 /* Sidebar */
 .sidebar {
   min-height: calc(100vh - 63px);
-  background: linear-gradient(to top, #5768f3, #1c45ef);
+  background: #101112;
+   /* linear-gradient(to top, #5768f3, #1c45ef); */
   font-family: "roboto", sans-serif;
   padding: 0;
   width: 270px;
@@ -416,7 +417,7 @@
           display: block;
           height: 100%;
           width: 2px;
-          background: #1026de; }
+          background: #fc5b3f; }
         .sidebar > .nav .nav-item:not(.hover-open) .collapse .sub-menu .nav-item .nav-link:hover,
         .sidebar > .nav .nav-item:not(.hover-open) .collapsing .sub-menu .nav-item .nav-link:hover {
           color: #fff; }
@@ -533,7 +534,7 @@
       transition-timing-function: "ease-in-out";
       transition-property: "background", "color", "box-shadow", "padding"; }
     .sidebar > .nav:not(.sub-menu) > .nav-item:hover:not(.nav-profile):not(.hover-open) > .nav-link:not([aria-expanded="true"]) {
-      background: #0f25d5;
+      background: #fc5b3f;
       padding-left: 65px; }
       .sidebar > .nav:not(.sub-menu) > .nav-item:hover:not(.nav-profile):not(.hover-open) > .nav-link:not([aria-expanded="true"]):before {
         border-color: #fff; }
@@ -583,12 +584,16 @@
 
 .card {
   box-shadow: 0 0 0 0 rgba(90, 113, 208, 0.11), 0 4px 16px 0 rgba(167, 175, 183, 0.33);
-  border: solid 1px #dde4eb;
-  border-radius: 0px; }
+  border-radius: 5px; }
   .card .card-title {
     color: #212529; }
   .card .card-header {
     background: #fff; }
+  .card-header-text {
+      letter-spacing: 1px;
+      font-weight: 300;
+      font-size: 12px;
+  }
 
 .page-body-wrapper {
   min-height: calc(100vh - 63px);
@@ -748,3 +753,30 @@
     display: none; }
 
 /*# sourceMappingURL=style.css.map */
+
+.card-bordered {
+    border: 1px solid #dbdfea;
+}
+.card-inner {
+    padding: 1.25rem;
+}
+@media (min-width: 576px) {
+    .card-inner {
+        padding: 1.5rem;
+    }
+}
+
+.form-control-wrap, .form-control-group {
+    position: relative;
+}
+
+.form-ref {
+    height: 40px;
+    text-align: center;
+    font-size: 14px;
+    background: #101112;
+    color: #fc5b3f;
+    font-weight: bold;
+    border: 0;
+    border-radius: 5px;
+}

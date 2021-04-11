@@ -30,22 +30,22 @@ class HomeController extends Controller
     public function index()
     {
         $bitcoinInfo = $this->getCryptoCurrencyInformation();
-        
+
         if(!$bitcoinInfo) {
             $bitcoinInfo = 47000.80;
-        } 
+        }
 
         $xrate = $bitcoinInfo;
 
         $income = $this->getTotalIncome() ?? 0.00;
         $deposit =  0.0000000;
-        $plan = null ?? "PLAN"; 
+        $plan = null ?? "PLAN";
 
         $deposits = Deposit::where(['user_id' => auth()->user()->id])
             ->with(['plan', 'income'])
             ->limit(10)
             ->orderBy('id', 'DESC')
-            ->get(); 
+            ->get();
 
         // calculate Current Investment
         $current_investment = $this->getTotalActivePackageDeposit() ?? 0.00; // $
@@ -59,14 +59,20 @@ class HomeController extends Controller
 
         if(auth()->user()->is_admin) {
             $plans = \App\Packages::all();
-            
-           
+
+
             return view('admin-home')->with([
                 'xrate' => number_format($xrate, 2, '.', ','),
                 'plans' =>  $plans,
-                 
+
             ]);
         }else {
+            $total_investment = $this->totalInvestment(auth()->user()->id);
+
+            $pending_investment = $this->pendingInvestment(auth()->user()->id);
+
+            $totalWithdrawal = $this->totalWithdrawal(auth()->user()->id);
+
             return view('home')->with([
                 'xrate' => number_format($xrate, 2, '.', ','),
                 'deposit' => number_format($deposit, 6, '.', ','),
@@ -76,22 +82,80 @@ class HomeController extends Controller
                 'current_investment_btc' => number_format($current_investment_btc, 6, '.', ', '),
                 'plan' =>  $plan,
                 'deposits' =>  $deposits,
-                'referral_count' => $referral_count
+                'referral_count' => $referral_count,
+                'total_investment' => number_format($total_investment, 2, '.', ', '),
+                'pending_investment' => number_format($pending_investment, 2, '.', ', '),
+                'total_referral' => number_format($this->totalReferral(auth()->user()->id), 2, '.', ', ' ),
+                'total_withdrawal' => number_format($totalWithdrawal,  2, '.', ', ' )
             ]);
         }
+    }
+
+    public function totalReferral($user_id)
+    {
+        $payers = \App\Referral::where(['referral_id'=>$user_id, 'has_injected' => 0])
+            ->get();
+
+        $balance = 0;
+        foreach($payers as $p) {
+            $confirmed_deposit = \App\Deposit::where(['user_id' => $p->user_id, 'status' => 'Active'])
+                ->orderBy('id', 'DESC')
+                ->get()
+                ->first();
+            if(!is_null($confirmed_deposit)) {
+                $amount = 0.10 * $confirmed_deposit->amount;
+                $balance += $amount;
+            }
+        }
+
+        return $balance;
+    }
+
+    public function totalInvestment($user_id)
+    {
+        $recs = \App\Deposit::where(['user_id' => $user_id])
+            ->get();
+        $income = 0.00;
+        foreach($recs as $r) {
+            if($r->status == "Active")
+                $income += $r->due_amount;
+        }
+        return $income;
+    }
+
+    public function totalWithdrawal($user_id)
+    {
+        $recs = \App\Deposit::where(['user_id' => $user_id, 'status' => 'Completed'])
+            ->get();
+        $income = 0.00;
+        foreach($recs as $r) {
+            $income += $r->due_amount;
+        }
+        return $income;
+    }
+
+    public function pendingInvestment($user_id)
+    {
+        $recs = \App\Deposit::where(['user_id' => $user_id, 'status' => 'Pending'])
+            ->get();
+        $income = 0.00;
+        foreach($recs as $r) {
+            $income += $r->due_amount;
+        }
+        return $income;
     }
 
     public function editPlan(Request $request, $id)
     {
         if(auth()->user()->is_admin) {
             $plan = \App\Packages::find($id);
-        
+
             return view('admin-plan-edit')->with(['p'=> $plan]);
         } else {
             abort(404);
         }
     }
-    
+
     public function editPlanSubmit(Request $request)
     {
         if(auth()->user()->is_admin) {
@@ -108,13 +172,13 @@ class HomeController extends Controller
 
     public function userDelete(Request $request) {
         if(auth()->user()->is_admin) {
-            
+
             \App\Referral::where(['user_id' => $request->id])->delete();
             \App\Referral::where(['referral_id' => $request->id])->delete();
             \App\Transaction::where(['user_id' => $request->id])->delete();
             \App\DepositProof::where(['user_id' => $request->id])->delete();
             \App\Deposit::where(['user_id' => $request->id])->delete();
-            
+
             \App\User::find($request->id)->delete();
             $request->session()->flash('success', 'User deleted successfully!');
             return redirect()->back();
@@ -126,23 +190,23 @@ class HomeController extends Controller
     public function getUsers(Request $request)
     {
         if(auth()->user()->is_admin) {
-            $users = \App\User::orderBy('id', 'DESC')->get();
-        
+            $users = \App\User::orderBy('id', 'DESC')->paginate(15);
+
             return view('admin-users')->with(['users'=> $users]);
         } else {
             abort(404);
         }
     }
 
-    public function deposit() 
+    public function deposit()
     {
 
         $bitcoinInfo = $this->getCryptoCurrencyInformation();
-        
+
         if(!$bitcoinInfo) {
             $bitcoinInfo = 47000.80;
-        } 
-        
+        }
+
         return view('deposit')->with([
             'xrate' => $xrate
         ]);
@@ -164,6 +228,7 @@ class HomeController extends Controller
                     $total += (float) $i->amount;
                 }
             }
+            // $total = $total + $d->amount;
         }
         return $total;
     }
@@ -185,14 +250,14 @@ class HomeController extends Controller
     /**
      * Retrieves the complete information providen by the coinmarketcap API from a single currency.
      * By default returns only the value in USD.
-     * 
+     *
      * WARNING: do not use this code in production, it's just to explain how the API works and how
-     * can the information be retrieved. See step 3 for final implementation. 
+     * can the information be retrieved. See step 3 for final implementation.
      *
      * @param string $currencyId Identifier of the currency
      * @param string $convertCurrency
      * @see https://coinmarketcap.com/api/
-     * @return mixed 
+     * @return mixed
      */
     private function getCryptoCurrencyInformation(){
 
@@ -200,13 +265,13 @@ class HomeController extends Controller
 
         curl_setopt($cURLConnection, CURLOPT_URL, "https://api.coingate.com/v2/rates/merchant/BTC/USD");
         curl_setopt($cURLConnection, CURLOPT_RETURNTRANSFER, true);
-        
+
         $rates = curl_exec($cURLConnection);
         curl_close($cURLConnection);
-        
+
 
         return $rates;
-            
+
     }
 
     private function getReferralCount($user_id) {
@@ -239,6 +304,13 @@ class HomeController extends Controller
                     ]);
         $request->session()->flash('success', 'Profile record updated successfully!');
         return redirect()->back();
+    }
+
+    public function getUserReferral($user_id) {
+        $referrals = \App\Referral::where(['referral_id' => $user_id])
+            ->with(['user'])
+            ->paginate(20);
+        return view('admin-user-referrals')->with(['referrals' => $referrals]);
     }
 
     public function logout()

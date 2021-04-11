@@ -26,7 +26,7 @@
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
                     
-                    <img src="{{ asset('blendconsults.png') }}" style="width: 80px" alt="" srcset="">
+                    <img src="{{ asset('logo.png') }}" style="width: 80px" alt="" srcset="">
                         
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">

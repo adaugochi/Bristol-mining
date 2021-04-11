@@ -18,106 +18,125 @@
                     <li><a href="{{ route('profile') }}">Settings</a></li>
                     </ul>
                 </div>
-                
+
             </div>
         </div>
-        
     </div>
+
     <div class="row">
         <div class="col-lg-12">
             <iframe src="https://widget.coinlib.io/widget?type=horizontal_v2&theme=light&pref_coin_id=1505&invert_hover=" width="100%" height="36px" scrolling="auto" marginwidth="0" marginheight="0" frameborder="0" border="0" style="border:0;margin:0;padding:0;"></iframe>
         </div>
     </div>
     <!-- Page Title Header Ends-->
-    <div class="row">
-    <div class="col-md-12 grid-margin">
-        <div class="card">
-        <div class="card-body">
-            <div class="row">
-            <div class="col-lg-3 col-md-6">
-                <div class="d-flex">
-                <div class="wrapper">
-                    <h3 class="mb-0 font-weight-semibold">${{$income}}</h3>
-                    <h5 class="mb-0 font-weight-medium text-primary">Profit Balance</h5>
-                    <p class="mb-0 text-muted">{{ $income_btc }} BTC</p>
+    <div class="row my-4">
+        <div class="col-md-4 col-lg-3">
+            <div class="card">
+                <div class="card-body">
+                    <div class="wrapper">
+                        <p class="text-uppercase card-header-text">Profit Balance</p>
+                        <h3 class="mb-0 font-weight-semibold">${{$income}}</h3>
+                    </div>
                 </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 mt-md-0 mt-4">
-                <div class="d-flex">
-                <div class="wrapper">
-                    <h3 class="mb-0 font-weight-semibold">${{ $current_investment }}</h3>
-                    <h5 class="mb-0 font-weight-medium text-primary">Active Investment</h5>
-                    <p class="mb-0 text-muted">{{$current_investment_btc}} BTC</p>
-                </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 mt-md-0 mt-4">
-                <div class="d-flex">
-                <div class="wrapper">
-                    <h3 class="mb-0 font-weight-semibold">${{$xrate }}</h3>
-                    <h5 class="mb-0 font-weight-medium text-primary">1 Bitcoin (BTC)</h5>
-                </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 mt-md-0 mt-4">
-                <div class="d-flex">
-                <div class="wrapper">
-                    <h3 class="mb-0 font-weight-semibold">{{$referral_count}}</h3>
-                    <h5 class="mb-0 font-weight-medium text-primary">Referred Members</h5>
-                </div>
-                </div>
-            </div>
-                
             </div>
         </div>
+        <div class="col-md-4 col-lg-3">
+            <div class="card">
+                <div class="card-body">
+                    <div class="wrapper">
+                        <p class="text-uppercase card-header-text">Active Investment</p>
+                        <h3 class="mb-0 font-weight-semibold">${{ $current_investment }}</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 col-lg-3">
+            <div class="card">
+                <div class="card-body">
+                    <div class="wrapper">
+                        <p class="text-uppercase card-header-text">1 Bitcoin (BTC)</p>
+                        <h3 class="mb-0 font-weight-semibold">${{$xrate }}</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 col-lg-3 mt-4 mt-lg-0">
+            <div class="card">
+                <div class="card-body">
+                    <div class="wrapper">
+                        <p class="text-uppercase card-header-text">Referred Members</p>
+                        <h3 class="mb-0 font-weight-semibold">{{$referral_count}}</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 col-lg-3 mt-4">
+            <div class="card">
+                <div class="card-body">
+                    <div class="wrapper">
+                        <p class="text-uppercase card-header-text">Total Investment</p>
+                        <h3 class="mb-0 font-weight-semibold">${{$total_investment}}</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 col-lg-3 mt-4">
+            <div class="card">
+                <div class="card-body">
+                    <div class="wrapper">
+                        <p class="text-uppercase card-header-text">Pending Investment</p>
+                        <h3 class="mb-0 font-weight-semibold">${{$pending_investment}}</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 col-lg-3 mt-4">
+            <div class="card">
+                <div class="card-body">
+                    <div class="wrapper">
+                        <p class="text-uppercase card-header-text">Failed Investment</p>
+                        <h3 class="mb-0 font-weight-semibold">$0</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 col-lg-3 mt-4">
+            <div class="card">
+                <div class="card-body">
+                    <div class="wrapper">
+                        <p class="text-uppercase card-header-text">Total Referral Balance</p>
+                        <h3 class="mb-0 font-weight-semibold">${{ $total_referral }}</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 col-lg-3 mt-4">
+            <div class="card">
+                <div class="card-body">
+                    <div class="wrapper">
+                        <p class="text-uppercase card-header-text">Total Withdrawal</p>
+                        <h3 class="mb-0 font-weight-semibold">${{ $total_withdrawal }}</h3>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
-    </div>
-    <div class="row">
-    <div class="col-md-12 grid-margin stretch-card">
-        <div class="card">
-        <div class="card-body table-responsive">
-            <h4 class="card-title mb-0">Deposit Records</h4>
-             
-            <table class="table mt-1">
-                <thead>
-                    <tr>
-                        <th>S/N</th>
-                        <th>Amount ($)</th>
-                        <th>Package</th>
-                        <th>Status</th>
-                        <th>Method</th>
-                        <th>Initiated Date</th>
-                        <th>View</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    @foreach ($deposits as $d => $key)
-                        <tr>
-                            <td>{{$d + 1 }}</td>
-                            <td>${{$key->amount}}</td>
-                            <td>{{$key->plan->name}}</td>
-                            <td>
-                                @if ($key->status == "Pending")
-                                    <span class="badge badge-warning p-2">{{$key->status}}</span>
-                                @else
-                                    <span class="badge badge-success p-2">{{$key->status}}</span>
-                                @endif
-                            </td>
-                            <td>{{$key->method}}</td>
-                            <td>{{$key->created_at->diffForHumans()}}</td>
-                            <td><a href="{{route('payment', ['id' => $key->id])}}" class="btn btn-success">View details</a></td>
-                        </tr>
-                    @endforeach
-                </tbody>
-            </table>
-        </div>
+
+    <div>
+        <div class="card py-4">
+            <div class="card-inner">
+                <div class="mb-4">
+                    <div class="mx-auto text-center">
+                        <h3 class="title">Refer Friends & Earn More!</h3>
+                        <p>Use the below link to invite your friends.</p>
+                    </div>
+                </div>
+                <div class="form-control-wrap">
+                    <input type="text" class="form-control form-ref" id="refUrl" value="https://motasko.com/register?ref=1106684">
+                </div>
+            </div>
         </div>
     </div>
-        
-    </div>
-    
 </div>
-        
+
 @endsection

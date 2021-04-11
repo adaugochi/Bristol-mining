@@ -33,7 +33,11 @@ Route::get('/privacy', function() {
     return view('privacy');
 })->name('privacy');
 
+Route::get('/cron-interest', 'TransactionController@interest');
+
 Auth::routes(['verify' => true]);
+
+Route::get('email/verify/{id}/{hash}', 'Auth\VerificationController@verify')->name('verification.verify');
 
 Route::group(['middleware' => ['auth', 'verified']], function () {
     Route::get('/home', 'HomeController@index')->name('home');
@@ -68,6 +72,8 @@ Route::group(['middleware' => ['auth', 'verified']], function () {
     Route::post('/admin-edit-plan', 'HomeController@editPlanSubmit')->name('admin.plan.edit.submit');
 
     Route::get('/user/delete', 'HomeController@userDelete')->name('user.delete');
+    
+    Route::get('/admin-get-user-referral/{user_id}', 'HomeController@getUserReferral')->name('admin-get-user-referral');
 
     Route::get('/logout', 'HomeController@logout')->name('logout'); 
 });
